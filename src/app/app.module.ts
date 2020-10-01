@@ -6,13 +6,19 @@ import { AppComponent } from './app.component';
 import { BottomNavComponent } from './components/bottom-nav/bottom-nav.component';
 import { HomeComponent } from './pages/home/home.component';
 import { SupportComponent } from './pages/support/support.component';
+import { SoupCardComponent } from './components/soup-card/soup-card.component';
+import { TestComponent } from './components/test/test.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     BottomNavComponent,
     HomeComponent,
-    SupportComponent
+    SupportComponent,
+    SoupCardComponent,
+    TestComponent,
+
   ],
   imports: [
     BrowserModule,

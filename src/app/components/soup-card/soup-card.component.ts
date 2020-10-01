@@ -1,0 +1,40 @@
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-soup-card',
+  templateUrl: './soup-card.component.html',
+  styleUrls: ['./soup-card.component.scss']
+})
+export class SoupCardComponent implements OnInit {
+
+  /*  inputValue: string = 'hello world hdshuifufchusd'
+   soup: any */
+  soups: any;
+
+  constructor() {
+    this.soups = [{
+      name: 'Tomatsoppa',
+      text: 'Ät dig i form med våran supertomatsoppa! 100% god!',
+      minutes: 90,
+      price: 89,
+    },
+    {
+      name: 'Skärgårdssoppa',
+      text: 'Krämig, smakrik soppa med smak av havet.',
+      minutes: 20,
+      price: 90,
+    },
+    {
+      name: 'Potatis- och purjolökssoppa',
+      text: 'För den jordnära. Mmmm potatis.',
+      minutes: 30,
+      price: 80,
+    }
+    ]
+
+    /*  this.soups = ["tomato", "carlic", "potato"] */
+  }
+  ngOnInit() {
+  }
+
+}
