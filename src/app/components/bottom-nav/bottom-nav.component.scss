@@ -1,0 +1,51 @@
+$primary: #32936F;
+
+.container{
+    margin: 0px;
+    background: $primary;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    
+   
+
+    
+    ul{
+        padding: 0;
+        margin: 0px;
+        display: flex;
+         list-style: none;
+         justify-content: space-around;
+         align-items: flex-end;
+         padding: 10px;;
+    }
+
+    a{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+        font-size: smaller;
+        color: white;
+        text-decoration: none;
+        
+        p{
+            margin:0;
+            margin-top: 3px;
+            font-size: smaller;
+        }
+    }
+
+
+    #support-logo{
+        min-height: 23px;
+        width: 23px;;
+    }
+    
+    #soup-logo{
+        min-height: 23px;
+        width: 25px;;
+    }
+
+    
+}
