@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { BottomNavComponent } from './components/bottom-nav/bottom-nav.component';
 import { HomeComponent } from './pages/home/home.component';
 import { SupportComponent } from './pages/support/support.component';
-import { SoupCardComponent } from './components/soup-card/soup-card.component';
+import { SoupListComponent } from './components/soup-list/soup-list.component';
 import { TestComponent } from './components/test/test.component';
 import { SingleSoupComponent } from './components/single-soup/single-soup.component';
 
@@ -17,7 +17,7 @@ import { SingleSoupComponent } from './components/single-soup/single-soup.compon
     BottomNavComponent,
     HomeComponent,
     SupportComponent,
-    SoupCardComponent,
+    SoupListComponent,
     TestComponent,
     SingleSoupComponent,
 

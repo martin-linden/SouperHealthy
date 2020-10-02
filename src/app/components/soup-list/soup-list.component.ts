@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 /* import {image} from '../../../assets/images/cart.svg' */
 
 @Component({
-  selector: 'app-soup-card',
-  templateUrl: './soup-card.component.html',
-  styleUrls: ['./soup-card.component.scss']
+  selector: 'app-soup-list',
+  templateUrl: './soup-list.component.html',
+  styleUrls: ['./soup-list.component.scss']
 })
-export class SoupCardComponent implements OnInit {
+export class SoupListComponent implements OnInit {
 
   /*  inputValue: string = 'hello world hdshuifufchusd'
    soup: any */
