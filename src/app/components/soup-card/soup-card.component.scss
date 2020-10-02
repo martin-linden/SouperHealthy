@@ -1,4 +1,14 @@
 
+.title-container{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+    span{
+        color: #32936F;
+    }
+}
+
 .card-container{
     display: flex;
 justify-content: space-around;
