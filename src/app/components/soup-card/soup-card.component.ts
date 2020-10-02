@@ -2,11 +2,11 @@ import { Component, OnInit, Input, Output } from '@angular/core';
 import { EventEmitter } from '@angular/core';
 
 @Component({
-  selector: 'app-test',
-  templateUrl: './test.component.html',
-  styleUrls: ['./test.component.scss']
+  selector: 'app-soup-card',
+  templateUrl: './soup-card.component.html',
+  styleUrls: ['./soup-card.component.scss']
 })
-export class TestComponent implements OnInit {
+export class SoupCardComponent implements OnInit {
 
   @Input() soup: any;
   @Output() notify: EventEmitter<any> = new EventEmitter<any>()
