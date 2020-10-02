@@ -8,6 +8,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { SupportComponent } from './pages/support/support.component';
 import { SoupCardComponent } from './components/soup-card/soup-card.component';
 import { TestComponent } from './components/test/test.component';
+import { SingleSoupComponent } from './components/single-soup/single-soup.component';
 
 
 @NgModule({
@@ -18,6 +19,7 @@ import { TestComponent } from './components/test/test.component';
     SupportComponent,
     SoupCardComponent,
     TestComponent,
+    SingleSoupComponent,
 
   ],
   imports: [
