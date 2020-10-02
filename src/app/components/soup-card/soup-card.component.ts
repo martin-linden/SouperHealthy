@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+/* import {image} from '../../../assets/images/cart.svg' */
 
 @Component({
   selector: 'app-soup-card',
@@ -13,9 +14,10 @@ export class SoupCardComponent implements OnInit {
 
   constructor() {
     this.soups = [{
+      img: '../../../assets/images/soups/tomato-soup.jpg',
       name: 'Tomatsoppa',
       text: 'Ät dig i form med våran supertomatsoppa! 100% god!',
-      minutes: 90,
+      minutes: 20,
       price: 89,
     },
     {
