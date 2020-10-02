@@ -21,17 +21,62 @@ export class SoupCardComponent implements OnInit {
       price: 89,
     },
     {
+      img: '../../../assets/images/soups/tomato-soup.jpg',
       name: 'Skärgårdssoppa',
       text: 'Krämig, smakrik soppa med smak av havet.',
       minutes: 20,
       price: 90,
     },
     {
-      name: 'Potatis- och purjolökssoppa',
+      img: '../../../assets/images/soups/tomato-soup.jpg',
+      name: 'Linsssoppa',
       text: 'För den jordnära. Mmmm potatis.',
       minutes: 30,
       price: 80,
-    }
+    },
+    {
+      img: '../../../assets/images/soups/tomato-soup.jpg',
+      name: 'Tomatsoppa',
+      text: 'Ät dig i form med våran supertomatsoppa! 100% god!',
+      minutes: 20,
+      price: 89,
+    },
+    {
+      img: '../../../assets/images/soups/tomato-soup.jpg',
+      name: 'Skärgårdssoppa',
+      text: 'Krämig, smakrik soppa med smak av havet.',
+      minutes: 20,
+      price: 90,
+    },
+    {
+      img: '../../../assets/images/soups/tomato-soup.jpg',
+      name: 'Linsssoppa',
+      text: 'För den jordnära. Mmmm potatis.',
+      minutes: 30,
+      price: 80,
+    },
+    {
+      img: '../../../assets/images/soups/tomato-soup.jpg',
+      name: 'Tomatsoppa',
+      text: 'Ät dig i form med våran supertomatsoppa! 100% god!',
+      minutes: 20,
+      price: 89,
+    },
+    {
+      img: '../../../assets/images/soups/tomato-soup.jpg',
+      name: 'Skärgårdssoppa',
+      text: 'Krämig, smakrik soppa med smak av havet.',
+      minutes: 20,
+      price: 90,
+    },
+    {
+      img: '../../../assets/images/soups/tomato-soup.jpg',
+      name: 'Linsssoppa',
+      text: 'För den jordnära. Mmmm potatis.',
+      minutes: 30,
+      price: 80,
+    },
+
     ]
 
     /*  this.soups = ["tomato", "carlic", "potato"] */
