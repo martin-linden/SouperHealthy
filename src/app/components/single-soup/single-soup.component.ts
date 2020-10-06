@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-single-soup',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./single-soup.component.scss']
 })
 export class SingleSoupComponent implements OnInit {
+
+  @Input() soup: any
 
   constructor() { }
 

@@ -9,6 +9,7 @@ import { SupportComponent } from './pages/support/support.component';
 import { SoupListComponent } from './components/soup-list/soup-list.component';
 import { SoupCardComponent } from './components/soup-card/soup-card.component';
 import { SingleSoupComponent } from './components/single-soup/single-soup.component';
+import { SoupComponent } from './pages/soup/soup.component';
 
 
 @NgModule({
@@ -20,6 +21,7 @@ import { SingleSoupComponent } from './components/single-soup/single-soup.compon
     SoupListComponent,
     SoupCardComponent,
     SingleSoupComponent,
+    SoupComponent,
 
   ],
   imports: [
