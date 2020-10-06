@@ -14,7 +14,7 @@ export class SoupCardComponent implements OnInit {
 
   onClicked() {
     this.notify.emit(this.soup.slug + " was clicked")
-    console.log(this.soup.slug)
+    /* console.log(this.soup.slug) */
     this.router.navigate(['/soup', this.soup.slug]); // kolla om +1 är klickat, isf gör ntå annat :)
 
   }

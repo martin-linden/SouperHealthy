@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-/* import {image} from '../../../assets/images/cart.svg' */
 import SoupJson from '../../../assets/soups.json';
+
+
 
 @Component({
   selector: 'app-soup-list',
@@ -15,9 +16,12 @@ export class SoupListComponent implements OnInit {
   title: string
 
 
+
   onNotified(message: string) {
     this.title = message
   }
+
+
 
   constructor() {
     this.soups = SoupJson;
@@ -98,5 +102,6 @@ export class SoupListComponent implements OnInit {
   }
   ngOnInit() {
   }
+
 
 }

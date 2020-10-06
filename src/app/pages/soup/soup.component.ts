@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, Input } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import SoupJson from '../../../assets/soups.json';
 
@@ -8,20 +8,22 @@ import SoupJson from '../../../assets/soups.json';
   styleUrls: ['./soup.component.scss']
 })
 export class SoupComponent implements OnInit, OnDestroy {
+
   slug: any;
   soup: any;
   private sub: any;
+  soups: any;
 
   constructor(private route: ActivatedRoute) {
-
+    this.soups = SoupJson;
   }
 
   ngOnInit() {
     this.sub = this.route.params.subscribe(params => {
-      console.log(params)
+      /* console.log(params) */
       this.slug = params['slug']; // (+) converts string 'id' to a number
-      this.soup = SoupJson.find(soup => soup.slug == this.slug)
-      console.log(this.soup);
+      this.soup = this.soups.find(soup => soup.slug == this.slug)
+      /* console.log(this.soup); */
       // In a real app: dispatch action to load the details here.
     });
   }

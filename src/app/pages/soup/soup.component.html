@@ -1,4 +1,34 @@
-<div>
-    Showing product details for product: {{slug}}
-    <app-soup-card [soup]="soup"></app-soup-card>
+<!-- Showing product details for product: {{slug}} -->
+<div class="main-container">
+    <img src="{{soup.img}}" class="soup-img">
+    <div class="intro-wrapper">
+        <h2>{{soup.name}}</h2>
+        <hr>
+        <h4>Pris: {{soup.price}} Kr</h4>
+    </div>
+    <div class="info-boxes">
+        <div class="ingredients">
+            <img src="../../../assets/images/ingredients.svg">
+            <h6>ingredienser</h6>
+            <p>Spenat, tomater, koriander, linser </p>
+        </div>
+        <div class="nutritional">
+            <img src="../../../assets/images/nutritional.svg">
+            <h6>Näringsinnehåll</h6>
+            <p>kalorier: 49 </p>
+            <p>proterin: 37g/ 100g</p>
+        </div>
+    </div>
+    <div class="input">
+        <div class="input-top">
+            <p>Meddela köket</p>
+            <img src="../../../assets/images/chef.svg">
+        </div>
+        <textarea class="text" placeholder="ex “allergisk mot nötter”:"> </textarea>
+
+    </div>
+    <div class="buttons">
+        <!--  <button class="remove-btn">Ta bort</button> -->
+        <button class="add-btn">Lägg till</button>
+    </div>
 </div>
