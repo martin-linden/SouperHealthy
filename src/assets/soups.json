@@ -1,14 +1,24 @@
 [
     {
-        "slug": "soup1",
+        "slug": "tomatsoppa",
         "img": "../../../assets/images/soups/tomato-soup.jpg",
         "name": "Tomatsoppa",
         "text": "Ät dig i form med våran supertomatsoppa! 100% god!",
         "minutes": 20,
-        "price": 89
+        "price": 89,
+        "ingredients": [
+            "Tomater",
+            "Koriander",
+            "Linser",
+            "kryddor"
+        ],
+        "nutritional": {
+            "calories": "49 g/100g",
+            "protein": "37 g/100g"
+        }
     },
     {
-        "slug": "soup2",
+        "slug": "skärgårdssoppa",
         "img": "../../../assets/images/soups/tomato-soup.jpg",
         "name": "Skärgårdssoppa",
         "text": "Krämig, smakrik soppa med smak av havet.",
@@ -16,55 +26,7 @@
         "price": 90
     },
     {
-        "slug": "soup3",
-        "img": "../../../assets/images/soups/tomato-soup.jpg",
-        "name": "Linsssoppa",
-        "text": "För den jordnära. Mmmm potatis.",
-        "minutes": 30,
-        "price": 80
-    },
-    {
-        "slug": "soup4",
-        "img": "../../../assets/images/soups/tomato-soup.jpg",
-        "name": "Tomatsoppa",
-        "text": "Ät dig i form med våran supertomatsoppa! 100% god!",
-        "minutes": 20,
-        "price": 89
-    },
-    {
-        "slug": "tomatsoppa1",
-        "img": "../../../assets/images/soups/tomato-soup.jpg",
-        "name": "Skärgårdssoppa",
-        "text": "Krämig, smakrik soppa med smak av havet.",
-        "minutes": 20,
-        "price": 90
-    },
-    {
-        "slug": "tomatsoppa2",
-        "img": "../../../assets/images/soups/tomato-soup.jpg",
-        "name": "Linsssoppa",
-        "text": "För den jordnära. Mmmm potatis.",
-        "minutes": 30,
-        "price": 80
-    },
-    {
-        "slug": "tomatsoppa3",
-        "img": "../../../assets/images/soups/tomato-soup.jpg",
-        "name": "Tomatsoppa",
-        "text": "Ät dig i form med våran supertomatsoppa! 100% god!",
-        "minutes": 20,
-        "price": 89
-    },
-    {
-        "slug": "tomatsoppa4",
-        "img": "../../../assets/images/soups/tomato-soup.jpg",
-        "name": "Skärgårdssoppa",
-        "text": "Krämig, smakrik soppa med smak av havet.",
-        "minutes": 20,
-        "price": 90
-    },
-    {
-        "slug": "tomatsoppa5",
+        "slug": "linsssoppa",
         "img": "../../../assets/images/soups/tomato-soup.jpg",
         "name": "Linsssoppa",
         "text": "För den jordnära. Mmmm potatis.",

@@ -7,16 +7,26 @@ import SoupJson from '../../../assets/soups.json';
   templateUrl: './soup.component.html',
   styleUrls: ['./soup.component.scss']
 })
+
+
+
 export class SoupComponent implements OnInit, OnDestroy {
+
+
 
   slug: any;
   soup: any;
   private sub: any;
   soups: any;
 
+
   constructor(private route: ActivatedRoute) {
     this.soups = SoupJson;
+
   }
+
+
+
 
   ngOnInit() {
     this.sub = this.route.params.subscribe(params => {
