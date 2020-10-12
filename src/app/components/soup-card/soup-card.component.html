@@ -1,13 +1,14 @@
 <div class="card-wrapper" (click)="onClicked()">
     <img src="{{soup.img}}" class="soup-img">
     <div class="name-info-wrapper">
+
         <h2>{{soup.name}}</h2>
         <p>Klicka på kortet för att läsa mer / redigera</p>
     </div>
     <hr>
     <div class="text-button-wrapper">
         <p>{{soup.text}}</p>
-        <button class="add-btn">+1</button>
+        <button class=" add-btn" (click)="onButtonClicked()">+1</button>
     </div>
     <hr>
     <div class="time-price-wrapper">
@@ -15,8 +16,7 @@
             <img src="../../../assets/images/time.svg" id="time-icon">
             <p>{{soup.minutes}} min</p>
         </div>
-
         <p>Pris: {{soup.price}} Kr</p>
     </div>
-
+    <p>{{receivedParentMessage}}</p>
 </div>

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import SoupJson from '../../../assets/soups.json';
 
 
@@ -14,6 +14,8 @@ export class SoupListComponent implements OnInit {
    soup: any */
   soups: any
   title: string
+  messageToSend: string = 'sent from parent';
+
 
 
 

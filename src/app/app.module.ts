@@ -8,8 +8,8 @@ import { HomeComponent } from './pages/home/home.component';
 import { SupportComponent } from './pages/support/support.component';
 import { SoupListComponent } from './components/soup-list/soup-list.component';
 import { SoupCardComponent } from './components/soup-card/soup-card.component';
-import { SingleSoupComponent } from './components/single-soup/single-soup.component';
 import { SoupComponent } from './pages/soup/soup.component';
+import { ShoppingCartComponent } from './components/shopping-cart/shopping-cart.component';
 
 
 @NgModule({
@@ -20,8 +20,8 @@ import { SoupComponent } from './pages/soup/soup.component';
     SupportComponent,
     SoupListComponent,
     SoupCardComponent,
-    SingleSoupComponent,
     SoupComponent,
+    ShoppingCartComponent,
 
   ],
   imports: [
