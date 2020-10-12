@@ -9,7 +9,10 @@ import { SoupsStoreService } from '../../soups-store.service';
 })
 export class BottomNavComponent implements OnInit {
 
-  constructor(public soupsStore: SoupsStoreService) { }
+  constructor(public soupsStore: SoupsStoreService) {
+
+    console.log(soupsStore.soups)
+  }
 
   ngOnInit() {
     // här kan du göra saker som körs 1  gång verkar det som

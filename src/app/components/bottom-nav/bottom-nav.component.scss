@@ -47,5 +47,27 @@ $primary: #32936F;
         width: 25px;;
     }
 
+    .text-circle-wrapper{
+        display: flex;
+        align-items: center;
+    }
+
+    .circle{
+        border:1px solid #fff;    
+       /*  background: white; */
+        border-radius:50%;
+        width: 17px;
+        height: 17px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 5px;
+
+        p{
+            color: #fff;
+            margin: 0px;
+        }
+    }
+
     
 }

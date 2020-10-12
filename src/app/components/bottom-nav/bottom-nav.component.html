@@ -17,7 +17,14 @@
             <li>
                 <a routerLink="#">
                     <img src="../../../assets/images/cart.svg" alt="shopping cart" id="soup-logo" />
-                    <p>Kundvagn {{soupsStore.soups.length}}</p>
+                    <div class="text-circle-wrapper">
+                        Kundvagn
+                        <div class="circle">
+                            <p>{{soupsStore.soups.length}}</p>
+                        </div>
+                    </div>
+
+
 
                 </a>
             </li>
