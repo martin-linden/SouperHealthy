@@ -10,6 +10,7 @@ import { SoupListComponent } from './components/soup-list/soup-list.component';
 import { SoupCardComponent } from './components/soup-card/soup-card.component';
 import { SoupComponent } from './pages/soup/soup.component';
 import { ShoppingCartComponent } from './components/shopping-cart/shopping-cart.component';
+import { SignInComponent } from './pages/sign-in/sign-in.component';
 
 
 @NgModule({
@@ -22,6 +23,7 @@ import { ShoppingCartComponent } from './components/shopping-cart/shopping-cart.
     SoupCardComponent,
     SoupComponent,
     ShoppingCartComponent,
+    SignInComponent,
 
   ],
   imports: [
