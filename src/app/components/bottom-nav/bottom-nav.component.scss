@@ -53,8 +53,8 @@ $primary: #32936F;
     }
 
     .circle{
-        border:1px solid #fff;    
-       /*  background: white; */
+        /* border:1px solid #fff;    */ 
+       background: rgb(255 255 255 / 91%); 
         border-radius:50%;
         width: 17px;
         height: 17px;
@@ -62,10 +62,14 @@ $primary: #32936F;
         justify-content: center;
         align-items: center;
         margin-left: 5px;
+        position: absolute;
+        margin-left: 17px;
+        margin-bottom: 17px;
 
         p{
-            color: #fff;
+            color: black;
             margin: 0px;
+            font-size: 70%;
         }
     }
 
