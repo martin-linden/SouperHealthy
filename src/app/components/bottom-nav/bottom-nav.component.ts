@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { SoupsStoreService } from '../../soups-store.service';
+
 @Component({
   selector: 'app-bottom-nav',
   templateUrl: './bottom-nav.component.html',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BottomNavComponent implements OnInit {
 
-  constructor() { }
+  constructor(public soupsStore: SoupsStoreService) {
+
+    console.log(soupsStore.soups)
+  }
 
   ngOnInit() {
+    // här kan du göra saker som körs 1  gång verkar det som
   }
 
 }

@@ -1,42 +1,41 @@
-import { Component, OnInit } from '@angular/core';
-/* import {image} from '../../../assets/images/cart.svg' */
+import { Component, OnInit, Input, Output } from '@angular/core';
+import { ChangeDetectionStrategy } from '@angular/core';
+import { EventEmitter } from '@angular/core';
+import { Router } from '@angular/router';
+import { SoupsStoreService } from '../../soups-store.service';
 
 @Component({
   selector: 'app-soup-card',
   templateUrl: './soup-card.component.html',
-  styleUrls: ['./soup-card.component.scss']
+  styleUrls: ['./soup-card.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class SoupCardComponent implements OnInit {
 
-  /*  inputValue: string = 'hello world hdshuifufchusd'
-   soup: any */
-  soups: any;
+  @Input() soup: any;
+  @Input() receivedParentMessage: string;
+  @Output() notify: EventEmitter<any> = new EventEmitter<any>()
 
-  constructor() {
-    this.soups = [{
-      img: '../../../assets/images/soups/tomato-soup.jpg',
-      name: 'Tomatsoppa',
-      text: 'Ät dig i form med våran supertomatsoppa! 100% god!',
-      minutes: 20,
-      price: 89,
-    },
-    {
-      name: 'Skärgårdssoppa',
-      text: 'Krämig, smakrik soppa med smak av havet.',
-      minutes: 20,
-      price: 90,
-    },
-    {
-      name: 'Potatis- och purjolökssoppa',
-      text: 'För den jordnära. Mmmm potatis.',
-      minutes: 30,
-      price: 80,
-    }
-    ]
 
-    /*  this.soups = ["tomato", "carlic", "potato"] */
+  onClicked() {
+    this.notify.emit(this.soup.slug + " was clicked")
+    /* console.log(this.soup.slug) */
+    this.router.navigate(['/soup', this.soup.slug]); // kolla om +1 är klickat, isf gör något annat :) 
+
+  }
+
+
+  onButtonClicked() {
+    /* alert('+1 was clicked') */
+    this.soupsStore.addSoup(this.soup.slug)
+  }
+
+
+  constructor(private router: Router, public soupsStore: SoupsStoreService) {
+
   }
   ngOnInit() {
+    //console.log(this.soupsStore.soups)
   }
 
 }

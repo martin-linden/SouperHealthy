@@ -1,11 +1,73 @@
+.card-wrapper{
+    background: #fff;
+    max-width: 245px;
+    min-width: 245px;
+    /* min-height: 517px; */
+    padding: 20px;
+    border-radius: 20px;;
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,0.1), 0 1px 2px 0 rgba(0,0,0,0.06);
+    transition: 0.3s ease-in-out;  
+    &:hover{
+        box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
 
-.container{
-    display: grid;
+    }
+
+    .soup-img{
+    max-width: 100%;
+    border-radius: 10px;;
+    }
+
+    .name-info-wrapper{
+
+        h2{
+            margin-bottom: 5px;;
+        }
+
+        p{
+            margin: 0;
+            font-size: 70%;
+        }
+    }
+
+    .text-button-wrapper{
+        display: flex;
+        align-items: center;
+        min-height: 100px;
+        max-height: 100px;
+
+        p{
+            width: 80%;
+        }
+    }
+
+    .add-btn{
+        background: #32936F;
+        border-style: none;
+        height: 35px;
+        width: 47px;
+        color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+
+    }
+
+    .time-price-wrapper{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .time-price-item{
+        display: flex;
+    }
     
 
-}
+    #time-icon{
+        width: 23px;;
+        margin-right: 10px;;
+    }
 
-.test{
-    padding: 25px;
-    grid-template-rows: 3;
+    p{
+        font-size: 80%;
+        padding: 5px;;
+    }
 }

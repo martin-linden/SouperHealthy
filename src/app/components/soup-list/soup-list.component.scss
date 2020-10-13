@@ -1,0 +1,28 @@
+
+.title-container{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+    span{
+        color: #32936F;
+    }
+}
+
+.card-container{
+    display: flex;
+justify-content: space-around;
+
+}
+
+.card-grid-container{
+    display: grid;
+    grid-gap: 60px;
+    grid-template-columns: repeat(3,minmax(0,1fr));
+     @media (max-width: 1060px) {
+        grid-template-columns: repeat(2,minmax(0,1fr));
+        } 
+     @media (max-width: 700px) {
+        grid-template-columns: repeat(1,minmax(0,1fr));
+        } 
+}

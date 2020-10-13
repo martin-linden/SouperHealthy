@@ -4,22 +4,30 @@
             <li>
 
                 <a routerLink="/support">
-                    <img src="../../../assets/images/support.svg" alt="support page" id="support-logo" />
+                    <img src="../../../assets/images/svg/support.svg" alt="support page" id="support-logo" />
                     <p>Support</p>
                 </a>
             </li>
             <li>
                 <a routerLink="/">
-                    <img src="../../../assets/images/soup.svg" alt="soups" id="soup-logo" />
+                    <img src="../../../assets/images/svg/soup.svg" alt="soups" id="soup-logo" />
                     <p>Meny</p>
                 </a>
             </li>
             <li>
-                <a routerLink="#">
-                    <img src="../../../assets/images/cart.svg" alt="shopping cart" id="soup-logo" />
-                    <p>Kundvagn</p>
+                <a routerLink="/sign-in">
+                    <div class="text-circle-wrapper">
+                        <img src="../../../assets/images/svg/cart.svg" alt="shopping cart" id="soup-logo" />
+                        <div class="circle">
+                            <p>{{soupsStore.soups.length}}</p>
+                        </div>
+                    </div>
+                    Kundvagn
                 </a>
             </li>
         </ul>
     </nav>
     <div class="container">
+
+
+        <!--  *ngIf="soupsStore.soups.length !== 0" -->

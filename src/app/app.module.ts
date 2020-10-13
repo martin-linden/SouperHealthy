@@ -6,8 +6,12 @@ import { AppComponent } from './app.component';
 import { BottomNavComponent } from './components/bottom-nav/bottom-nav.component';
 import { HomeComponent } from './pages/home/home.component';
 import { SupportComponent } from './pages/support/support.component';
+import { SoupListComponent } from './components/soup-list/soup-list.component';
 import { SoupCardComponent } from './components/soup-card/soup-card.component';
-import { TestComponent } from './components/test/test.component';
+import { SoupComponent } from './pages/soup/soup.component';
+import { ShoppingCartComponent } from './components/shopping-cart/shopping-cart.component';
+import { SignInComponent } from './pages/sign-in/sign-in.component';
+import { DeliveryInfoComponent } from './pages/delivery-info/delivery-info.component';
 
 
 @NgModule({
@@ -16,8 +20,12 @@ import { TestComponent } from './components/test/test.component';
     BottomNavComponent,
     HomeComponent,
     SupportComponent,
+    SoupListComponent,
     SoupCardComponent,
-    TestComponent,
+    SoupComponent,
+    ShoppingCartComponent,
+    SignInComponent,
+    DeliveryInfoComponent,
 
   ],
   imports: [

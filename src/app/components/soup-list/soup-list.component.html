@@ -1,0 +1,16 @@
+<!-- <h1>{{title}}</h1> -->
+<div class="title-container">
+    <h1>Upptäck våra <span>läckra</span> Soppor</h1>
+</div>
+
+
+<!-- <input type="text" [value]="inputValue"> -->
+<div class="card-container">
+    <div class="card-grid-container" *ngIf="soups">
+        <div *ngFor="let soup of soups">
+
+            <app-soup-card [receivedParentMessage]="messageToSend" [soup]="soup" (notify)="onNotified($event)">
+            </app-soup-card>
+        </div>
+    </div>
+</div>
