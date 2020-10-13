@@ -10,7 +10,7 @@ export class SignInComponent implements OnInit {
 
 
   navigate() {
-    this.router.navigate(['/support']);
+    this.router.navigate(['/delivery-info']);
   };
 
   constructor(private router: Router,) { }
