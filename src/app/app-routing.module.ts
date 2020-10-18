@@ -6,6 +6,7 @@ import { SupportComponent } from './pages/support/support.component';
 import { SignInComponent } from './pages/sign-in/sign-in.component'
 import { SoupComponent } from './pages/soup/soup.component';
 import { DeliveryInfoComponent } from './pages/delivery-info/delivery-info.component';
+import { OrderOverviewComponent } from './pages/order-overview/order-overview.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -13,6 +14,7 @@ const routes: Routes = [
   { path: 'soup/:slug', component: SoupComponent },
   { path: 'sign-in', component: SignInComponent },
   { path: 'delivery-info', component: DeliveryInfoComponent },
+  { path: 'order-overview', component: OrderOverviewComponent },
   // { path: '**', component: PageNotFoundComponent },  // 
 ];
 

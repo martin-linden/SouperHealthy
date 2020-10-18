@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-delivery-info',
@@ -7,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DeliveryInfoComponent implements OnInit {
 
-  constructor() { }
+  navigate() {
+    this.router.navigate(['/order-overview']);
+  };
+
+  constructor(private router: Router,) { }
 
   ngOnInit() {
   }

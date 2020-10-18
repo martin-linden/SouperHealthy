@@ -12,6 +12,7 @@ import { SoupComponent } from './pages/soup/soup.component';
 import { ShoppingCartComponent } from './components/shopping-cart/shopping-cart.component';
 import { SignInComponent } from './pages/sign-in/sign-in.component';
 import { DeliveryInfoComponent } from './pages/delivery-info/delivery-info.component';
+import { OrderOverviewComponent } from './pages/order-overview/order-overview.component';
 
 
 @NgModule({
@@ -26,6 +27,7 @@ import { DeliveryInfoComponent } from './pages/delivery-info/delivery-info.compo
     ShoppingCartComponent,
     SignInComponent,
     DeliveryInfoComponent,
+    OrderOverviewComponent,
 
   ],
   imports: [
