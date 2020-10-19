@@ -9,7 +9,7 @@
     <div class="card-grid-container" *ngIf="soups">
         <div *ngFor="let soup of soups">
 
-            <app-soup-card [receivedParentMessage]="messageToSend" [soup]="soup" (notify)="onNotified($event)">
+            <app-soup-card  [soup]="soup" (notify)="onNotified($event)">
             </app-soup-card>
         </div>
     </div>

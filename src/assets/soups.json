@@ -19,18 +19,38 @@
     },
     {
         "slug": "skärgårdssoppa",
-        "img": "../../../assets/images/soups/tomato-soup.jpg",
+        "img": "../../../assets/images/soups/soup2.jpg",
         "name": "Skärgårdssoppa",
         "text": "Krämig, smakrik soppa med smak av havet.",
         "minutes": 20,
-        "price": 90
+        "price": 90,
+        "ingredients": [
+            "Tomater",
+            "Koriander",
+            "Linser",
+            "kryddor"
+        ],
+        "nutritional": {
+            "calories": "49 g/100g",
+            "protein": "37 g/100g"
+        }
     },
     {
         "slug": "linssoppa",
-        "img": "../../../assets/images/soups/tomato-soup.jpg",
+        "img": "../../../assets/images/soups/linssoppa.jpg",
         "name": "Linsssoppa",
         "text": "För den jordnära. Mmmm potatis.",
         "minutes": 30,
-        "price": 80
+        "price": 80,
+        "ingredients": [
+            "Tomater",
+            "Koriander",
+            "Linser",
+            "kryddor"
+        ],
+        "nutritional": {
+            "calories": "49 g/100g",
+            "protein": "37 g/100g"
+        }
     }
 ]

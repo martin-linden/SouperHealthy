@@ -13,7 +13,7 @@ import { SoupsStoreService } from '../../soups-store.service';
 export class SoupCardComponent implements OnInit {
 
   @Input() soup: any;
-  @Input() receivedParentMessage: string;
+ /*  @Input() receivedParentMessage: string; */
   @Output() notify: EventEmitter<any> = new EventEmitter<any>()
 
 
