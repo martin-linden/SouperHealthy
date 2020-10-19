@@ -12,6 +12,7 @@ const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'support', component: SupportComponent },
   { path: 'soup/:slug', component: SoupComponent },
+
   { path: 'sign-in', component: SignInComponent },
   { path: 'delivery-info', component: DeliveryInfoComponent },
   { path: 'order-overview', component: OrderOverviewComponent },
