@@ -11,12 +11,15 @@ import { SoupsStoreService } from '../../soups-store.service';
 export class OrderOverviewComponent implements OnInit {
 
   soups: any
+  store: any
 
 
   constructor(private router: Router, public soupsStore: SoupsStoreService) { 
     this.soups = SoupJson;
+    this.store = soupsStore.soups
 
-    console.log(this.soups)
+/*     console.log(soupsStore.soups[0].title) */
+
   }
 
   ngOnInit() {

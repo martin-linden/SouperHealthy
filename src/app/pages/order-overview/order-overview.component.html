@@ -12,13 +12,12 @@
         <th align="left">Antal</th>
         <th align="left">Ändra</th>
       </tr>
-      
-      <tr *ngFor="let soup of soups">
-        <td>{{soup.name}}</td> 
-        <td>{{soupsStore.soups.length}} st</td>
-        <td><img (click)="this.router.navigate(['/soup', soup.slug])" src="../../../assets/images/svg/edit.svg"></td>
+      <tr *ngFor="let soup of store">
+        <td *ngIf="soup.title">{{soup.title}}</td> 
+        <td *ngIf="soup.amount">{{soup.amount}} st</td>
+        <td *ngIf="soup.title"><img (click)="this.router.navigate(['/soup', soup.title])" src="../../../assets/images/svg/edit.svg"></td>
       </tr>
-    
+    <h5>Total summa att betala: {{store.length * soups[0].price}} kr </h5>
     </tbody>
     </table>
 </div>

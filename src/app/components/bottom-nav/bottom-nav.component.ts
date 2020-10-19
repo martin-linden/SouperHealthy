@@ -11,7 +11,7 @@ export class BottomNavComponent implements OnInit {
 
   constructor(public soupsStore: SoupsStoreService) {
 
-    console.log(soupsStore.soups)
+   /*  console.log(soupsStore.soups) */
   }
 
   ngOnInit() {

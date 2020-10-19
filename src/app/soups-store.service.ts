@@ -52,7 +52,7 @@ export class SoupsStoreService {
             // and we just assume that the server will return success responses anyway most of the time.
             // if server returns an error, we just revert back the changes in the catch statement 
 
-            const tmpId = "23"; //vad gör den?
+            const tmpId = "23"; //vad gör den? hur får sopporna ett unikt id?
             const tmpSoup = { id: tmpId, title, amount: 1 };
             // skriv kod som kollar om en soppa med en viss title redan finns._soups
             //isf lägg till amount = amount + 1 //jag skulle ta bort amount?
