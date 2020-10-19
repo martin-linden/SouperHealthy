@@ -22,6 +22,18 @@ export class OrderOverviewComponent implements OnInit {
 
   }
 
+  calcTotalSum() {
+    return this.store.reduce((acc, item) => {
+      const price = this.soups.find(soup => soup.slug == item.title).price 
+      /* if (!price) {
+        return;
+      } */
+      console.log("acc: " + acc)
+      console.log("price: " + price)
+      console.log("item.price" + item.amount)
+      return acc + (Number(price) * Number(item.amount));
+    }, 0);
+  }
   ngOnInit() {
   }
 

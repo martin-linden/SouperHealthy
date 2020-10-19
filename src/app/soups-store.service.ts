@@ -56,11 +56,19 @@ export class SoupsStoreService {
             const tmpSoup = { id: tmpId, title, amount: 1 };
             // skriv kod som kollar om en soppa med en viss title redan finns._soups
             //isf lägg till amount = amount + 1 //jag skulle ta bort amount?
+            if (this.soups.some(soup => soup.title == title)) {
+                // Soppan finns redan
+                this.soups.find(soup => soup.title == title).amount += 1;
+               /*  this.soups = [
+                    ...this.soups
+                ]; */
+            } else {
 
             this.soups = [
                 ...this.soups,
                 tmpSoup
             ];
+        }
 
 
         }
@@ -71,7 +79,17 @@ export class SoupsStoreService {
         // optimistic update
         // todo: skriv om denna så att den minskar soppan id med ett
         const soup = this.soups.find(t => t.title === title);
-        this.soups = this.soups.filter(soup => soup.title !== title);
+        if (!soup) {
+            return;
+        }
+        if (soup.amount == 1) {
+            //sista soppan, OK att ta bort hela
+            this.soups = this.soups.filter(soup => soup.title !== title);
+        } else {
+            soup.amount -= 1;
+            // inte sista soppan, minska med ett
+        }
+        
         //Tar bort alla soppor just nu
        
     }
