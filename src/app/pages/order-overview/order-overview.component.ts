@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import SoupJson from '../../../assets/soups.json';
 
 @Component({
   selector: 'app-order-overview',
@@ -7,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OrderOverviewComponent implements OnInit {
 
-  constructor() { }
+  soups: any
+
+  constructor() { 
+    this.soups = SoupJson;
+  }
 
   ngOnInit() {
   }

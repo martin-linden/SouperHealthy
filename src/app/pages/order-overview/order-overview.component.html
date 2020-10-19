@@ -2,19 +2,21 @@
     <h2>Orderöversikt</h2>
 
     <div class="soup-overview">
+      <div class="icon-wrapper">
+        <img src="../../../assets/images/svg/list.svg" id="icon">
+      </div>
         <table>
         <tbody>
-       
       <tr>
         <th align="left">Soppa</th>
         <th align="left">Antal</th>
         <th align="left">Ändra</th>
       </tr>
       
-      <tr>
-        <td>Tomatsoppa</td> 
+      <tr *ngFor="let soup of soups">
+        <td>{{soup.name}}</td> 
         <td>2 st</td>
-        <td>Ändra</td>
+        <td><img src="../../../assets/images/svg/edit.svg"></td>
       </tr>
     
     </tbody>

@@ -18,12 +18,29 @@
       width: inherit;
     }
 
+    .icon-wrapper {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 15px;
+      margin-top: 15px;
+
+      img {
+        width: 30px;
+        height: 30px;
+      }
+    }
+
     th {
       border-bottom: 2px solid #c4c4c4;
       padding: 10px;
     }
     td {
       border-bottom: 1px solid #c4c4c4;
+
+      img {
+        width: 20px;
+        height: 20px;
+      }
     }
 
     .header {
