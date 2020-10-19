@@ -75,40 +75,4 @@ export class SoupsStoreService {
         this.soups = this.soups.filter(soup => soup.id !== id);
 
     }
-
-    /*    async setCompleted(id: string, isCompleted: boolean) {
-           let soup = this.soups.find(soup => soup.id === id);
-   
-           if (soup) {
-               // optimistic update
-               const index = this.soups.indexOf(soup);
-   
-               this.soups[index] = {
-                   ...soup,
-                   isCompleted
-               }
-   
-               this.soups = [...this.soups];
-   
-               try {
-                   await this.soupsService
-                       .setCompleted(id, isCompleted)
-                       .toPromise();
-   
-               } catch (e) {
-   
-                   console.error(e);
-                   this.soups[index] = {
-                       ...soup,
-                       isCompleted: !isCompleted
-                   }
-               }
-           }
-       } */
-
-
-    /*     async fetchAll() {
-            this.soups = await this.soupsService.index().toPromise();
-        } */
-
 }
