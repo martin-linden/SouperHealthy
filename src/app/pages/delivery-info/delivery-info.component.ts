@@ -8,10 +8,17 @@ import { Router } from '@angular/router';
 })
 export class DeliveryInfoComponent implements OnInit {
 
+  value: any
+  
+  submit(value){
+    console.log(value);
+    localStorage.setItem('data',JSON.stringify(value));
+  }
+/* 
   navigate() {
     this.router.navigate(['/order-overview']);
-  };
-
+  }
+ */
   constructor(private router: Router,) { }
 
   ngOnInit() {

@@ -1,13 +1,12 @@
-<div class="container">
+<form #f="ngForm" [ngFormOptions]="{updateOn: 'blur'}" novalidate>
     <h2>Leveransinformation</h2>
-
     <div class="delivery-info-container">
         <div class="input-container">
             <div class="input-content-container">
                 <img src="../../../assets/images/svg/guest.svg">
                 <p>Namn</p>
             </div>
-            <input type="text" placeholder="Mottagarens namn">
+            <input type="text" name="name" placeholder="Mottagarens namn" ngModel>
         </div>
 
         <div class="input-container">
@@ -15,7 +14,7 @@
                 <img src="../../../assets/images/svg/mail.svg">
                 <p>Email</p>
             </div>
-            <input type="email" placeholder="Email">
+            <input type="email" name="email" placeholder="Email" ngModel>
         </div>
 
         <div class="input-container">
@@ -23,7 +22,7 @@
                 <img src="../../../assets/images/svg/telephone.svg">
                 <p>Telefon</p>
             </div>
-            <input type="phone" placeholder="Telefon">
+            <input type="phone"  name="phone" placeholder="Telefon" ngModel>
         </div>
 
         <div class="input-container">
@@ -31,7 +30,7 @@
                 <img src="../../../assets/images/svg/adress.svg">
                 <p>Adress</p>
             </div>
-            <input type="text" placeholder="Adress">
+            <input type="text"  name="address" placeholder="Adress" ngModel>
         </div>
 
         <div class="input-container">
@@ -39,9 +38,9 @@
                 <img src="../../../assets/images/svg/post-number.svg">
                 <p>Postnummer</p>
             </div>
-            <input type="text" placeholder="Postnummer">
+            <input type="text"  name="postnumber" placeholder="Postnummer" ngModel>
         </div>
-    </div>
+        </div> 
 
     <div class="textarea-main">
         <div class="textarea-container">
@@ -49,35 +48,16 @@
                 <p>Meddelande till bud</p>
                 <img src="../../../assets/images/svg/alert.svg">
             </div>
-            <textarea class="text" placeholder="Extra information till bud (portkod, våning, mm)"></textarea>
+            <textarea class="text"  name="textarea" placeholder="Extra information till bud (portkod, våning, mm)" ngModel></textarea>
         </div>
-      <!--   <div class="textarea-container">
-            <div class="textarea-content-container">
-                <p>Skicka en hälsning</p>
-                <img id="greeting" src="../../../assets/images/svg/greeting.svg">
-            </div>
-            <textarea id="greeting-text"
-                placeholder="Skriv din hälsning till någon du vill ge en god soppa till här..."></textarea>
-        </div> -->
     </div>
 
-    <div class="delivery-time-container">
-        <h4>Välj leveransdag/tid <span>*</span></h4>
-        <div class="delivery-time-boxes">
-            <div class="box">
-                <p>Snarast</p>
-                <input type="checkbox" name="asap" value="">
-            </div>
-            <div class="box">
-                <p>Upphämtning</p>
-                <input type="checkbox" name="asap" value="">
-            </div>
-            <div class="box">
-                <p>Annan datum/tid</p>
-                <input type="checkbox" name="asap" value="">
-            </div>
-        </div>
-    </div>
+<select name="select" id="select">
+  <option name="snarast" value="a">Snarast</option>
+  <option>Upphämtning</option>
+  <option>Annat datum/tid</option>
+ 
+</select>
 
     <div class="time-container">
         <div class="column">
@@ -92,11 +72,7 @@
                 <button>20:00 - 21:00</button>
             </div>
         </div>
-        <button (click)="navigate()">Nästa</button>
-        
-    
-
-
-
-
-</div>
+        <a routerLink="/order-overview">
+    <button type=submit (click)="submit(f.value)">Nästa</button>
+        </a>
+</form>

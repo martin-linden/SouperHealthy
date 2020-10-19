@@ -1,169 +1,154 @@
-.container{
-display: flex;
-flex-direction: column;
-align-items: center;
-padding: 20px;
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
 
-.delivery-info-container{
+  .delivery-info-container {
     margin-bottom: 25px;
-}
+  }
 
+  .input-container {
+    margin-bottom: 20px;
+    .input-content-container {
+      display: flex;
+      align-items: center;
+      margin-bottom: 5px;
 
-.input-container{
+      p {
+        margin: 0px;
+      }
 
-margin-bottom: 20px;
-    .input-content-container{
+      img {
+        width: 20px;
+        max-height: 20px;
+        margin-right: 10px;
+      }
+    }
+
+    input {
+      background: #f1f1f1;
+      box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+      border: 0px solid;
+      border-radius: 4px;
+      width: 294px;
+      height: 39px;
+    }
+  }
+
+  textarea-main {
+    margin-bottom: 25px;
+  }
+
+  .textarea-container {
+    .textarea-content-container {
+      display: flex;
+      align-items: center;
+      margin-bottom: 5px;
+      justify-content: space-between;
+
+      p {
+        margin: 0px;
+      }
+
+      img {
+        width: 20px;
+        max-height: 20px;
+        margin-right: 10px;
+      }
+
+      #greeting {
+        min-width: 30px;
+        min-height: 30px;
+      }
+    }
+
+    textarea {
+      background: #f1f1f1;
+      box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+      border: 0px solid;
+      border-radius: 4px;
+      width: 294px;
+      height: 55px;
+      resize: none;
+    }
+
+    #greeting-text {
+      height: 75px;
+    }
+  }
+
+  .delivery-time-container {
+    span {
+      color: red;
+    }
+
+    .delivery-time-boxes {
+      .box {
         display: flex;
+        justify-content: space-between;
         align-items: center;
-        margin-bottom: 5px;
+        background: #e5e5e5;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+        width: 236px;
+        height: 43px;
+        margin-bottom: 15px;
 
-        p{
-            margin: 0px;
+        input {
+          width: 23px;
+          height: 23px;
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+          border: none;
+          margin-right: 30px;
         }
 
-        img{
-            width: 20px;
-            max-height: 20px;
-            margin-right: 10px;
+        p {
+          font-size: smaller;
+          margin-left: 20px;
         }
+      }
+    }
+  }
 
-     
+  .time-container {
+    display: flex;
+
+    .column {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
     }
 
-        input{
-            background: #F1F1F1;
-        box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
-        border: 0px solid;
-        border-radius: 4px;
-        width: 294px;
-        height: 39px;
-        }
+    button {
+      background: #c4c4c4;
+      color: #fff;
+      padding: 5px;
+      border-radius: 5px;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+      border: none;
+      margin-bottom: 10px;
+      width: 107px;
+      height: 37px;
+
+      &:hover {
+        background: #32936f;
+      }
+      &:focus {
+        background: #32936f;
+      }
     }
+  }
 
-    textarea-main{
-        margin-bottom: 25px;
-    }
-
-
-    .textarea-container{
-
-        .textarea-content-container{
-            display: flex;
-            align-items: center;
-            margin-bottom: 5px;
-            justify-content: space-between;
-
-        p{
-            margin: 0px;
-        }
-
-        img{
-            width: 20px;
-            max-height: 20px;
-            margin-right: 10px;
-        }
-
-        #greeting{
-            min-width: 30px;
-            min-height: 30px;
-        }
-      
-        }
-
-
-        textarea{
-            background: #F1F1F1;
-            box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
-            border: 0px solid;
-            border-radius: 4px;
-            width: 294px;
-            height: 55px;
-            resize: none;
-            
-            }
-
-            #greeting-text{
-                height: 75px;
-            }
-    }
-
-    .delivery-time-container{
-
-        span{
-            color: red;
-        }
-
-        .delivery-time-boxes{
-
-
-            .box{
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                background: #E5E5E5;
-                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.10);
-                border-radius: 5px;
-                width: 236px;
-                height: 43px;
-                margin-bottom: 15px;
-
-                input{
-                    width: 23px;
-                    height: 23px;
-                    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.10);
-                    border: none;
-                    margin-right: 30px;
-                }
-
-                p{
-                    font-size: smaller;
-                    margin-left: 20px;
-                }
-            }
-        }
-    }
-
-    .time-container{
-        display: flex;
-        
-        .column{
-           padding: 20px;
-           display: flex;
-           flex-direction: column;
-        }
-
-        button{
-            background: #C4C4C4;
-            color: #fff;
-            padding: 5px;
-            border-radius: 5px;
-            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.10);
-            border: none;
-            margin-bottom: 10px;
-            width: 107px;
-            height: 37px;
-
-            &:hover{
-                background: #32936F;
-            }
-            &:focus{
-                background: #32936F;
-            }
-        }
-    }
-
-    button{
-        background: #32936F;;
-            color: #fff;
-            padding: 5px;
-            border-radius: 5px;
-            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.10);
-            border: none;
-            margin-bottom: 10px;
-            width: 107px;
-            height: 37px;
-    }
-
-
-
+  button {
+    background: #32936f;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+    border: none;
+    margin-bottom: 10px;
+    width: 107px;
+    height: 37px;
+  }
 }
