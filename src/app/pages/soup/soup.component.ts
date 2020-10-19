@@ -1,6 +1,7 @@
 import { Component, OnInit, OnDestroy, Input } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import SoupJson from '../../../assets/soups.json';
+import { SoupsStoreService } from '../../soups-store.service';
 
 @Component({
   selector: 'app-soup',
@@ -12,15 +13,24 @@ import SoupJson from '../../../assets/soups.json';
 
 export class SoupComponent implements OnInit, OnDestroy {
 
-
-
   slug: any;
   soup: any;
   private sub: any;
   soups: any;
 
+  addSoups() {
+    /* alert('+1 was clicked') */
+    this.soupsStore.addSoup(this.soup.slug)
+  }
+  
+  removeSoups() {
+    /* alert('+1 was clicked') */
+    this.soupsStore.removeSoup(this.soup.slug)
+  }
 
-  constructor(private route: ActivatedRoute) {
+
+
+  constructor(private route: ActivatedRoute, public soupsStore: SoupsStoreService) {
     this.soups = SoupJson;
 
   }

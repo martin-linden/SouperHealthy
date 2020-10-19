@@ -15,7 +15,7 @@
       
       <tr *ngFor="let soup of soups">
         <td>{{soup.name}}</td> 
-        <td>{{soupsStore.soups.length}}</td>
+        <td>{{soupsStore.soups.length}} st</td>
         <td><img (click)="this.router.navigate(['/soup', soup.slug])" src="../../../assets/images/svg/edit.svg"></td>
       </tr>
     

@@ -52,10 +52,10 @@ export class SoupsStoreService {
             // and we just assume that the server will return success responses anyway most of the time.
             // if server returns an error, we just revert back the changes in the catch statement 
 
-            const tmpId = "23";
+            const tmpId = "23"; //vad gör den?
             const tmpSoup = { id: tmpId, title, amount: 1 };
             // skriv kod som kollar om en soppa med en viss title redan finns._soups
-            //isf lägg till amount = amount + 1
+            //isf lägg till amount = amount + 1 //jag skulle ta bort amount?
 
             this.soups = [
                 ...this.soups,
@@ -67,12 +67,22 @@ export class SoupsStoreService {
 
     }
 
-    async removeSoup(id: string) {
+    async removeSoup(title: string) {
         // optimistic update
         // todo: skriv om denna så att den minskar soppan id med ett
-
-        const soup = this.soups.find(t => t.id === id);
-        this.soups = this.soups.filter(soup => soup.id !== id);
-
+        const soup = this.soups.find(t => t.title === title);
+        this.soups = this.soups.filter(soup => soup.title !== title);
+        //Tar bort alla soppor just nu
+       
     }
 }
+
+//gammal kod under (som den va från början)
+/* async removeSoup(id: string) {
+    // optimistic update
+    // todo: skriv om denna så att den minskar soppan id med ett
+
+    const soup = this.soups.find(t => t.id === id);
+    this.soups = this.soups.filter(soup => soup.id !== id);
+
+} */

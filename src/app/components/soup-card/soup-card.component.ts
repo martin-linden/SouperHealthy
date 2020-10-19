@@ -17,7 +17,7 @@ export class SoupCardComponent implements OnInit {
   @Output() notify: EventEmitter<any> = new EventEmitter<any>()
 
 
-  onClicked() {
+  onCardClicked() {
     this.notify.emit(this.soup.slug + " was clicked")
     /* console.log(this.soup.slug) */
     this.router.navigate(['/soup', this.soup.slug]); // kolla om +1 är klickat, isf gör något annat :) 
@@ -25,7 +25,7 @@ export class SoupCardComponent implements OnInit {
   }
 
 
-  onButtonClicked() {
+  addSoups() {
     /* alert('+1 was clicked') */
     this.soupsStore.addSoup(this.soup.slug)
   }
