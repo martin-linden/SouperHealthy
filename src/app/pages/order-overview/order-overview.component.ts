@@ -20,7 +20,7 @@ export class OrderOverviewComponent implements OnInit {
     this.soups = SoupJson;
     this.store = soupsStore.soups
     this.localData = JSON.parse(localStorage.getItem('data'))
-    console.log(this.localData)
+    /* console.log(this.localData) */
   }
 
 /*   get(){

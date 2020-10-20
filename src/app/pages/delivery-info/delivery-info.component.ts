@@ -10,19 +10,26 @@ export class DeliveryInfoComponent implements OnInit {
 
   value: any
   localData: any
-  name: string
+  localFormData: any;
   
   submit(value){
-    /* console.log(value); */
     localStorage.setItem('data',JSON.stringify(value));
   }
 
   constructor(private router: Router,) {
-    this.localData = JSON.parse(localStorage.getItem('data'))
+    let localFormData = this.localData = JSON.parse(localStorage.getItem('data'))
     console.log(this.localData)
+    
+    if(!localFormData){
+      this.localFormData = ''
+    }else{
+      this.localFormData = localFormData
+    }
    }
 
+
   ngOnInit() {
+   
   }
 
 }
