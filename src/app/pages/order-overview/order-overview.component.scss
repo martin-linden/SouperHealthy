@@ -5,28 +5,56 @@
   align-items: center;
   padding: 25px;
 
-  .soup-overview {
-    width: 100%;
+  .card-overview {
+    width: 90%;
     max-width: 500px;
     background: #fff;
     border-radius: 10px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
-    padding: 10px;
+    padding: 15px;
+    margin-bottom: 45px;
+    margin-left: auto;
+    margin-right: auto;
 
     table {
       border-collapse: collapse;
       width: inherit;
+      width: 100%;
     }
 
     .icon-wrapper {
       display: flex;
       justify-content: center;
+      flex-direction: column;
+      align-items: center;
       margin-bottom: 15px;
       margin-top: 15px;
 
+      .icon-edit-wrapper {
+        position: absolute;
+        margin-left: 240px;
+        margin-bottom: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      h4 {
+        margin: 7px;
+      }
+
+      h5 {
+        margin: 3px;
+      }
+
       img {
-        width: 30px;
-        height: 30px;
+        width: 40px;
+        height: 32px;
+      }
+
+      #edit-icon {
+        width: 20px;
+        height: 20px;
       }
     }
 

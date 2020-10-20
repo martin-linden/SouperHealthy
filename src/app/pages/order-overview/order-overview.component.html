@@ -1,9 +1,10 @@
 <div class="container">
     <h2>Orderöversikt</h2>
 
-    <div class="soup-overview">
+    <div class="card-overview">
       <div class="icon-wrapper">
         <img src="../../../assets/images/svg/list.svg" id="icon">
+        <h4>Orderinfo</h4>
       </div>
         <table>
         <tbody>
@@ -18,6 +19,47 @@
         <td *ngIf="soup.title"><img (click)="this.router.navigate(['/soup', soup.title])" src="../../../assets/images/svg/edit.svg"></td>
       </tr>
     <h5>Total summa att betala: {{calcTotalSum()}} kr </h5>
+    </tbody>
+    </table>
+</div>
+   
+<div class="card-overview">
+      <div class="icon-wrapper">
+        <img src="../../../assets/images/svg/bike.svg" id="icon">
+        <h4>Leveransinfo</h4>
+        <div class="icon-edit-wrapper" (click)="this.router.navigate(['/delivery-info'])">
+          <img src="../../../assets/images/svg/edit.svg" id="edit-icon">
+          <h5>Ändra</h5>
+        </div>
+        
+      </div>
+        <table>
+        <tbody>
+      <tr>
+        <th align="left"></th>
+        <th align="left"></th>
+      </tr>
+      <tr>
+        <td>Namn:</td> 
+        <td>Martin Lindén</td>
+      </tr>
+      <tr>
+        <td>Adress:</td> 
+        <td>Vägen 1</td>
+      </tr>
+      <tr>
+        <td>Postnummer:</td> 
+        <td>111 11</td>
+      </tr>
+      <tr>
+        <td>Ort:</td> 
+        <td>Stockholm</td>
+      </tr>
+      <tr>
+        <td>Telefon:</td> 
+        <td>070 123 45 67</td>
+      </tr>
+    <h5>Meddelande till bud:</h5>
     </tbody>
     </table>
 </div>
