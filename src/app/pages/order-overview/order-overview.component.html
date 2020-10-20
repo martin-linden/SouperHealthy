@@ -41,15 +41,15 @@
       </tr>
       <tr>
         <td>Namn:</td> 
-        <td>Martin Lindén</td>
+        <td>{{localData.name}}</td>
       </tr>
       <tr>
         <td>Adress:</td> 
-        <td>Vägen 1</td>
+        <td>{{localData.address}}</td>
       </tr>
       <tr>
         <td>Postnummer:</td> 
-        <td>111 11</td>
+        <td>{{localData.postnumber}}</td>
       </tr>
       <tr>
         <td>Ort:</td> 
@@ -57,9 +57,13 @@
       </tr>
       <tr>
         <td>Telefon:</td> 
-        <td>070 123 45 67</td>
+        <td>{{localData.phone}}</td>
       </tr>
-    <h5>Meddelande till bud:</h5>
+      <tr>
+        <td>Email:</td> 
+        <td>{{localData.email}}</td>
+      </tr>
+    <h5>Meddelande till bud: {{localData.textarea}}</h5>
     </tbody>
     </table>
 </div>
