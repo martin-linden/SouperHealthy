@@ -10,22 +10,13 @@ export class DeliveryInfoComponent implements OnInit {
 
   value: any
   localData: any
+  name: string
   
   submit(value){
     /* console.log(value); */
     localStorage.setItem('data',JSON.stringify(value));
   }
 
- /*  setValue(){
-    document.getElementById("name").value = "Johnny Bravo";
-  }
- */
-
-/* 
-  navigate() {
-    this.router.navigate(['/order-overview']);
-  }
- */
   constructor(private router: Router,) {
     this.localData = JSON.parse(localStorage.getItem('data'))
     console.log(this.localData)

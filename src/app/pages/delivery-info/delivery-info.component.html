@@ -6,7 +6,7 @@
                 <img src="../../../assets/images/svg/guest.svg">
                 <p>Namn</p>
             </div>
-            <input id="name" type="text" name="name" placeholder="Mottagarens namn" value="Test" ngModel>
+            <input type="text" name="name" placeholder="Mottagarens namn" value="test" ngModel>
         </div>
 
         <div class="input-container">
@@ -52,10 +52,10 @@
         </div>
     </div>
 
-<select name="select" id="select">
-  <option name="snarast" value="a">Snarast</option>
-  <option>Upphämtning</option>
-  <option>Annat datum/tid</option>
+<select id="select" name="select" ngModel>
+  <option value="snarast">Snarast</option>
+  <option value="Upphämtning">Upphämtning</option>
+  <option value="Annat datum/tid">Annat datum/tid</option>
  
 </select>
 
