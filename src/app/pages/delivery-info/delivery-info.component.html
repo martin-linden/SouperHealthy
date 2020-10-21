@@ -30,7 +30,7 @@
                 <img src="../../../assets/images/svg/adress.svg">
                 <p>Adress</p>
             </div>
-            <input type="text"  name="address" placeholder="Adress" ngModel={{localFormData.adress}}>
+            <input type="text"  name="address" placeholder="Adress" ngModel={{localFormData.address}}>
         </div>
 
         <div class="input-container">
@@ -52,12 +52,11 @@
         </div>
     </div>
 
-<select id="select" name="select" ngModel>
-  <option value="snarast">Snarast</option>
-  <option value="Upphämtning">Upphämtning</option>
+<select id="select" name="select" ngModel={{localFormData.select}}>
+  <option value="Snarast">Snarast</option>
   <option value="Annat datum/tid">Annat datum/tid</option>
- 
 </select>
+<input type="checkbox" name="pickup" ngModel>
 
     <div class="time-container">
         <div class="column">

@@ -13,24 +13,24 @@ export class OrderOverviewComponent implements OnInit {
   soups: any
   store: any
   localData: any
-
- 
+  time: any
+  today: string
 
   constructor(private router: Router, public soupsStore: SoupsStoreService) { 
     this.soups = SoupJson;
     this.store = soupsStore.soups
     this.localData = JSON.parse(localStorage.getItem('data'))
-    /* console.log(this.localData) */
+    let today = new Date()
+
+    let dd = String(today.getDate()).padStart(2, '0');
+    let mm = String(today.getMonth() + 1).padStart(2, '0');
+    let yyyy = today.getFullYear();
+    
+    this.today = dd + '/' + mm + '/' + yyyy 
+    console.log(today)
   }
 
-/*   get(){
-    var getJson = localStorage.getItem('data')
-    if(getJson){
-        const arrayName = JSON.parse(getJson)
-        console.log(arrayName)
-    }
-} */
-
+  
 
 
 

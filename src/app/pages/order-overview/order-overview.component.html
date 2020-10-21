@@ -27,6 +27,7 @@
       <div class="icon-wrapper">
         <img src="../../../assets/images/svg/bike.svg" id="icon">
         <h4>Leveransinfo</h4>
+        <h6 *ngIf="localData.pickup">Kunden hämtar i restaurang</h6>
         <div class="icon-edit-wrapper" (click)="this.router.navigate(['/delivery-info'])">
           <img src="../../../assets/images/svg/edit.svg" id="edit-icon">
           <h5>Ändra</h5>
@@ -44,18 +45,6 @@
         <td>{{localData.name}}</td>
       </tr>
       <tr>
-        <td>Adress:</td> 
-        <td>{{localData.address}}</td>
-      </tr>
-      <tr>
-        <td>Postnummer:</td> 
-        <td>{{localData.postnumber}}</td>
-      </tr>
-      <!-- <tr>
-        <td>Ort:</td> 
-        <td>Stockholm</td>
-      </tr> -->
-      <tr>
         <td>Telefon:</td> 
         <td>{{localData.phone}}</td>
       </tr>
@@ -63,9 +52,66 @@
         <td>Email:</td> 
         <td>{{localData.email}}</td>
       </tr>
-    <h5>Meddelande till bud: {{localData.textarea}}</h5>
+      <ng-container *ngIf="!localData.pickup" >
+      <tr>
+        <td>Adress:</td> 
+        <td>{{localData.address}}</td>
+      </tr>
+      <tr>
+        <td>Postnummer:</td> 
+        <td>{{localData.postnumber}}</td>
+      </tr>
+    
+      <!-- <tr>
+        <td>Ort:</td> 
+        <td>Stockholm</td>
+      </tr> -->
+   
+    <h5>Meddelande till bud:</h5> 
+    <p>{{localData.textarea}}</p>
+  </ng-container>
     </tbody>
     </table>
+    <hr>
+    <div class="time-container">
+      <div class="img-title">
+        <img src="../../../assets/images/svg/time.svg" id="edit-icon">
+        <h4>Tid & leveransval</h4>
+      </div>  
+      <table>
+        <tbody>
+      <tr>
+        <th align="left"></th>
+        <th align="left"></th>
+      </tr>
+      <tr>
+        <td>Leveransval:</td> 
+        <td>{{localData.select}}<span *ngIf="localData.pickup">Kunden hämtar i restaurang</span></td>
+      </tr>
+      <tr>  
+        <td>Datum:</td> 
+        <td *ngIf="localData.select === 'Snarast'">{{today}}</td>
+        <td *ngIf="localData.select === 'Annat datum/tid'">Annat datum nu</td>
+      </tr>
+      <ng-container *ngIf="localData.select === 'Snarast'">
+      <tr>
+        <td>Beräknad tid efter order:</td> 
+        <td>30 minuter</td> 
+      </tr>
+    </ng-container>
+    <ng-container *ngIf="localData.select === 'Annat datum/tid'">
+      <tr>
+        <td>Beställd tid:</td> 
+        <td>16.30</td> 
+      </tr>
+    </ng-container>
+    <tr *ngIf="localData.pickup">
+      <td>Restaurangadress:</td> 
+      <td>Sveavägen 145</td> 
+    </tr>
+    </tbody>
+    </table>
+    </div>
 </div>
 </div>
 
