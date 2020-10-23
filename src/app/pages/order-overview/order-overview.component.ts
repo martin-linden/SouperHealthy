@@ -30,6 +30,11 @@ export class OrderOverviewComponent implements OnInit {
     console.log(today)
   }
 
+
+  removeLocal(){
+    localStorage.clear()
+  }
+  
   
 
 

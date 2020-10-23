@@ -113,5 +113,26 @@
     </table>
     </div>
 </div>
+<h2>Betalning</h2>
+
+    <div class="card-overview">
+      <div class="icon-wrapper">
+        <img src="../../../assets/images/svg/payment.svg" id="icon">
+        <h4>Välj betalningsmetod</h4>
+      </div>
+      <div class="button-wrapper">
+        <button (click)="this.router.navigate(['/delivery-info']); removeLocal()">
+          <div class="button-content">
+            <img src="../../../assets/images/svg/mastercard.svg" >
+            <p>Betalkort</p>
+          </div>
+        </button>
+        <button (click)="this.router.navigate(['/delivery-info']); removeLocal()">
+          <div class="button-content">
+            <img src="../../../assets/images/svg/swish.svg" id="swish" >
+          </div>
+        </button>
+      </div> 
+</div>
 </div>
 
