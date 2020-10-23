@@ -27,7 +27,7 @@
       <div class="icon-wrapper">
         <img src="../../../assets/images/svg/bike.svg" id="icon">
         <h4>Leveransinfo</h4>
-        <h6 *ngIf="localData.pickup">Kunden hämtar i restaurang</h6>
+        <h6 *ngIf="localData.selectOne === 'Hämta'">Kunden hämtar i restaurang</h6>
         <div class="icon-edit-wrapper" (click)="this.router.navigate(['/delivery-info'])">
           <img src="../../../assets/images/svg/edit.svg" id="edit-icon">
           <h5>Ändra</h5>
@@ -52,7 +52,7 @@
         <td>Email:</td> 
         <td>{{localData.email}}</td>
       </tr>
-      <ng-container *ngIf="!localData.pickup" >
+      <ng-container *ngIf="localData.selectOne === 'Leverans'" >
       <tr>
         <td>Adress:</td> 
         <td>{{localData.address}}</td>
@@ -86,7 +86,7 @@
       </tr>
       <tr>
         <td>Leveransval:</td> 
-        <td>{{localData.select}}<span *ngIf="localData.pickup">Kunden hämtar i restaurang</span></td>
+        <td>{{localData.select}}<span *ngIf="localData.selectOne === 'Hämta'">Kunden hämtar i restaurang</span></td>
       </tr>
       <tr>  
         <td>Datum:</td> 
@@ -105,10 +105,10 @@
         <td>16.30</td> 
       </tr>
     </ng-container>
-    <tr *ngIf="localData.pickup">
+ <!--    <tr *ngIf="localData.pickup">
       <td>Restaurangadress:</td> 
-      <td>Sveavägen 145</td> 
-    </tr>
+      <td>Odengatan 5</td> 
+    </tr> -->
     </tbody>
     </table>
     </div>
