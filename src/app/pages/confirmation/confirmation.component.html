@@ -1,0 +1,24 @@
+<div class="container">
+    <h2>Tack för din beställning</h2>
+
+    <div class="card-overview">
+      <div class="icon-wrapper">
+        <img src="../../../assets/images/svg/receipt.svg" id="icon">
+        <h4>Orderinfo</h4>
+      </div>
+        <table>
+        <tbody>
+      <tr>
+        <th align="left"></th>
+        <th align="left"></th>
+      </tr>
+      <tr *ngFor="let soup of store">
+        <td *ngIf="soup.title">{{soup.title}}</td> 
+        <td *ngIf="soup.amount">{{soup.amount}} st</td>
+        <td *ngIf="soup.title"><img (click)="this.router.navigate(['/soup', soup.title])" src="../../../assets/images/svg/edit.svg"></td>
+      </tr>
+    <h5>Total summa att betala: {{calcTotalSum()}} kr </h5>
+    </tbody>
+    </table>
+</div>
+</div>

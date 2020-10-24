@@ -13,6 +13,7 @@ import { ShoppingCartComponent } from './components/shopping-cart/shopping-cart.
 import { SignInComponent } from './pages/sign-in/sign-in.component';
 import { DeliveryInfoComponent } from './pages/delivery-info/delivery-info.component';
 import { OrderOverviewComponent } from './pages/order-overview/order-overview.component';
+import { ConfirmationComponent } from './pages/confirmation/confirmation.component';
 
 
 @NgModule({
@@ -28,6 +29,7 @@ import { OrderOverviewComponent } from './pages/order-overview/order-overview.co
     SignInComponent,
     DeliveryInfoComponent,
     OrderOverviewComponent,
+    ConfirmationComponent,
 
   ],
   imports: [
