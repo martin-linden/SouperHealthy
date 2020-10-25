@@ -17,9 +17,12 @@ export class ConfirmationComponent implements OnInit {
     
     this.receiptData = JSON.parse(localStorage.getItem('receipt'))
     console.log(this.receiptData) 
+
+    
    }
 
   ngOnInit() {
+    
   }
 
 }

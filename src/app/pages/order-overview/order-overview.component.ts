@@ -49,7 +49,7 @@ export class OrderOverviewComponent implements OnInit {
 
 
   removeLocal(){
-    localStorage.clear()
+    localStorage.removeItem('data')
   }
   
   

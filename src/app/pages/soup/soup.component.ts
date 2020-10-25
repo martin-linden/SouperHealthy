@@ -17,6 +17,7 @@ export class SoupComponent implements OnInit, OnDestroy {
   soup: any;
   private sub: any;
   soups: any;
+  amount: number;
 
   addSoups() {
     /* alert('+1 was clicked') */
@@ -27,6 +28,22 @@ export class SoupComponent implements OnInit, OnDestroy {
     /* alert('+1 was clicked') */
     this.soupsStore.removeSoup(this.soup.slug)
   }
+
+ /*  getSoupAmount() {
+    return this.soupsStore.soups.map(item => {
+      item.amount
+      console.log(item.amount)
+    })
+} */
+
+/*   displayButton(){
+    if(!this.soupsStore.soups){
+      console.log('error')
+    } else{
+      this.soupsStore.soups(this.soup.slug)
+      console.log(this.soupsStore.soups)
+    }
+  } */
 
 
 
@@ -43,8 +60,8 @@ export class SoupComponent implements OnInit, OnDestroy {
       /* console.log(params) */
       this.slug = params['slug']; // (+) converts string 'id' to a number
       this.soup = this.soups.find(soup => soup.slug == this.slug)
-      /* console.log(this.soup); */
-      // In a real app: dispatch action to load the details here.
+
+     
     });
   }
 
