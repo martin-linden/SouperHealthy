@@ -15,20 +15,39 @@
         <th align="left"></th>
       </tr>
       <tr>
-        <td>Leveransval(tid):</td> 
+        <td>Kund:</td> 
+        <td>{{receiptData.name}}</td>
+      </tr>
+      <tr>
+        <td>Orderdatum:</td> 
+        <td>{{receiptData.date}}</td>
+      </tr>
+      <tr>
+        <td>Leveransval:</td> 
+        <td>{{receiptData.option}}</td>
+      </tr>
+      <ng-container *ngIf="receiptData.option === 'Hämtar i restaurang'">
+        <tr>
+          <td>Restaurangadress:</td> 
+          <td>Odengatan 5</td>
+        </tr>
+      </ng-container>
+      <tr>
+        <td>Leveransval (tid):</td> 
         <td>{{receiptData.deliveryOption}}</td>
       </tr>
+      <ng-container *ngIf="receiptData.option === 'Leverans till adress'">
       <tr>
         <td>Leveransadress:</td> 
         <td>{{receiptData.adress}}</td>
       </tr>
-      <tr>
-        <td>Datum:</td> 
-        <td>{{receiptData.date}}</td>
-      </tr>
+    </ng-container>
+   
      
+     <ng-container *ngIf="receiptData.message">
         <h5>Meddelande till bud:</h5> 
         <p>{{receiptData.message}}</p>
+      </ng-container>
     </tbody>
     </table>
     <h5>Din order:</h5>

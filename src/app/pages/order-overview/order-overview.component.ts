@@ -40,7 +40,9 @@ export class OrderOverviewComponent implements OnInit {
       'totalSum': document.getElementById("totalSum").innerHTML,
       'message' : document.getElementById("message").innerHTML,
       'date' : document.getElementById("date").innerHTML,
-      'deliveryOption': document.getElementById("deliveryOption").innerHTML, 
+      'deliveryOption': document.getElementById("deliveryOption").innerHTML,
+      'option': document.getElementById("option").innerHTML, 
+      'name': document.getElementById("name").innerHTML, 
   };
     localStorage.setItem('receipt',JSON.stringify(receipt));
   }
