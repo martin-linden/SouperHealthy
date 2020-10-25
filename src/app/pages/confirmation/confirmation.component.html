@@ -1,24 +1,51 @@
 <div class="container">
-    <h2>Tack för din beställning</h2>
+    <h2>Tack för din beställning!</h2>
 
     <div class="card-overview">
       <div class="icon-wrapper">
         <img src="../../../assets/images/svg/receipt.svg" id="icon">
-        <h4>Orderinfo</h4>
+        <h4>Kvitto</h4>
+        <h5>Leverans:</h5>
       </div>
         <table>
         <tbody>
+        
       <tr>
         <th align="left"></th>
         <th align="left"></th>
       </tr>
-      <tr *ngFor="let soup of store">
-        <td *ngIf="soup.title">{{soup.title}}</td> 
-        <td *ngIf="soup.amount">{{soup.amount}} st</td>
-        <td *ngIf="soup.title"><img (click)="this.router.navigate(['/soup', soup.title])" src="../../../assets/images/svg/edit.svg"></td>
+      <tr>
+        <td>Leveransval(tid):</td> 
+        <td>{{receiptData.deliveryOption}}</td>
       </tr>
-    <h5>Total summa att betala: {{calcTotalSum()}} kr </h5>
+      <tr>
+        <td>Leveransadress:</td> 
+        <td>{{receiptData.adress}}</td>
+      </tr>
+      <tr>
+        <td>Datum:</td> 
+        <td>{{receiptData.date}}</td>
+      </tr>
+     
+        <h5>Meddelande till bud:</h5> 
+        <p>{{receiptData.message}}</p>
     </tbody>
     </table>
+    <h5>Din order:</h5>
+    <table>
+      <tbody>
+        <tr>
+          <th align="left">Soppa</th>
+          <th align="left">Antal</th>
+        </tr>
+    <tr *ngFor="let soup of store">
+      <td id="soupTitle" *ngIf="soup.title">{{soup.title}}</td> 
+      <td *ngIf="soup.amount">{{soup.amount}} st</td>
+    </tr>
+  </tbody>
+  </table>
+    <hr>
+    <h5>Order id: #00217 </h5>
+  <h4>{{receiptData.totalSum}}</h4> 
 </div>
 </div>

@@ -27,7 +27,7 @@ export class DeliveryInfoComponent implements OnInit {
   
     
   }
- */xs
+ */
  
 
   constructor(private router: Router,) {

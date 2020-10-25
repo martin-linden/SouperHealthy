@@ -31,6 +31,21 @@ export class OrderOverviewComponent implements OnInit {
   }
 
 
+  submitReceipt(){
+   
+
+
+    let receipt = { 
+      'adress': document.getElementById("adress").innerHTML,
+      'totalSum': document.getElementById("totalSum").innerHTML,
+      'message' : document.getElementById("message").innerHTML,
+      'date' : document.getElementById("date").innerHTML,
+      'deliveryOption': document.getElementById("deliveryOption").innerHTML, 
+  };
+    localStorage.setItem('receipt',JSON.stringify(receipt));
+  }
+
+
   removeLocal(){
     localStorage.clear()
   }

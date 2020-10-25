@@ -14,11 +14,11 @@
         <th align="left">Ändra</th>
       </tr>
       <tr *ngFor="let soup of store">
-        <td *ngIf="soup.title">{{soup.title}}</td> 
+        <td id="soupTitle" *ngIf="soup.title">{{soup.title}}</td> 
         <td *ngIf="soup.amount">{{soup.amount}} st</td>
         <td *ngIf="soup.title"><img (click)="this.router.navigate(['/soup', soup.title])" src="../../../assets/images/svg/edit.svg"></td>
       </tr>
-    <h5>Total summa att betala: {{calcTotalSum()}} kr </h5>
+    <h5 id="totalSum">Total summa: {{calcTotalSum()}} kr </h5>
     </tbody>
     </table>
 </div>
@@ -52,10 +52,10 @@
         <td>Email:</td> 
         <td>{{localData.email}}</td>
       </tr>
-      <ng-container *ngIf="localData.selectOne === 'Leverans'" >
+     <!--  <ng-container *ngIf="localData.selectOne === 'Leverans'" > -->
       <tr>
         <td>Adress:</td> 
-        <td>{{localData.address}}</td>
+        <td id="adress">{{localData.address}}</td>
       </tr>
       <tr>
         <td>Postnummer:</td> 
@@ -68,8 +68,8 @@
       </tr> -->
    
     <h5>Meddelande till bud:</h5> 
-    <p>{{localData.textarea}}</p>
-  </ng-container>
+    <p id="message">{{localData.textarea}}</p>
+  <!-- </ng-container> -->
     </tbody>
     </table>
     <hr>
@@ -86,12 +86,12 @@
       </tr>
       <tr>
         <td>Leveransval:</td> 
-        <td>{{localData.select}}<span *ngIf="localData.selectOne === 'Hämta'">Kunden hämtar i restaurang</span></td>
+        <td id="deliveryOption">{{localData.select}}</td>
       </tr>
       <tr>  
         <td>Datum:</td> 
-        <td *ngIf="localData.select === 'Snarast'">{{today}}</td>
-        <td *ngIf="localData.select === 'Annat datum/tid'">Annat datum nu</td>
+        <td id="date" *ngIf="localData.select === 'Snarast'">{{today}}</td>
+        <td id="date" *ngIf="localData.select === 'Annat datum/tid'">Annat datum nu</td>
       </tr>
       <ng-container *ngIf="localData.select === 'Snarast'">
       <tr>
@@ -121,13 +121,13 @@
         <h4>Välj betalningsmetod</h4>
       </div>
       <div class="button-wrapper">
-        <button (click)="this.router.navigate(['/confirmation']); removeLocal()">
+        <button (click)="this.router.navigate(['/confirmation']); submitReceipt()">
           <div class="button-content">
             <img src="../../../assets/images/svg/mastercard.svg" >
             <p>Betalkort</p>
           </div>
         </button>
-        <button (click)="this.router.navigate(['/confirmation']); removeLocal()">
+        <button (click)="this.router.navigate(['/confirmation']); submitReceipt()">
           <div class="button-content">
             <img src="../../../assets/images/svg/swish.svg" id="swish" >
           </div>
