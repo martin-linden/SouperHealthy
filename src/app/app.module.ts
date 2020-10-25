@@ -14,6 +14,7 @@ import { SignInComponent } from './pages/sign-in/sign-in.component';
 import { DeliveryInfoComponent } from './pages/delivery-info/delivery-info.component';
 import { OrderOverviewComponent } from './pages/order-overview/order-overview.component';
 import { ConfirmationComponent } from './pages/confirmation/confirmation.component';
+import { WizardComponent } from './components/wizard/wizard.component';
 
 
 @NgModule({
@@ -30,6 +31,7 @@ import { ConfirmationComponent } from './pages/confirmation/confirmation.compone
     DeliveryInfoComponent,
     OrderOverviewComponent,
     ConfirmationComponent,
+    WizardComponent,
 
   ],
   imports: [
