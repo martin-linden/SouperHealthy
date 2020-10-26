@@ -18,6 +18,7 @@ export class DeliveryInfoComponent implements OnInit {
 
   
   submit(value){
+    // om hämtas i butiken är vald
     localStorage.setItem('data',JSON.stringify(value));
   }
 /* 
@@ -28,7 +29,11 @@ export class DeliveryInfoComponent implements OnInit {
     
   }
  */
- 
+
+changeSelect(value) {
+  console.log(value);
+}
+
 
   constructor(private router: Router,) {
     let localFormData = JSON.parse(localStorage.getItem('data'))
@@ -60,7 +65,7 @@ export class DeliveryInfoComponent implements OnInit {
 
 
   ngOnInit() {
-   
+
   }
 
 }

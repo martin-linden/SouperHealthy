@@ -35,20 +35,22 @@ export class WizardComponent implements OnInit {
     }
   }
 
- scrollCircle(){
+ /* scrollCircle(){
   var y = window.scrollY
   console.log(y)
 
-  } 
+  }  */
 
 
  
 
-  constructor() { }
+  constructor() { 
+   /*  var y = window.scrollY
+    console.log(y) */
+  }
 
   ngOnInit() {
-    var y = window.scrollY
-    console.log(y)
+   
   }
 
 }

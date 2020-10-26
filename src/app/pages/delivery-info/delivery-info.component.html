@@ -2,7 +2,7 @@
 <form #f="ngForm" [ngFormOptions]="{updateOn: 'blur'}" novalidate>
     <h2>Leveransinformation</h2>
     <div class="delivery-info-container">
-        <select id="selectOne" name="selectOne" ngModel={{localFormData.selectOne}}>
+        <select id="selectOne" (change)="changeSelect()" name="selectOne" ngModel={{localFormData.selectOne}}>
             <option id="delivery" value="Leverans till adress">Leverans till adress</option>
             <option id="pickup" value="Hämtar i restaurang">Hämtar i restaurang</option>
           </select>

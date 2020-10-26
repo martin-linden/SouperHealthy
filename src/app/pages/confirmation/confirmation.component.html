@@ -58,7 +58,7 @@
           <th align="left">Soppa</th>
           <th align="left">Antal</th>
         </tr>
-    <tr *ngFor="let soup of store">
+    <tr *ngFor="let soup of soupReceiptData">
       <td id="soupTitle" *ngIf="soup.title">{{soup.title}}</td> 
       <td *ngIf="soup.amount">{{soup.amount}} st</td>
     </tr>

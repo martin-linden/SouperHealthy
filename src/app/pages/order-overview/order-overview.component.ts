@@ -34,8 +34,12 @@ export class OrderOverviewComponent implements OnInit {
   submitReceipt(){
    
 
-
-    let receipt = { 
+    let receiptFields = ['adress', 'totalSum', 'message', 'date', 'deliveryOption', 'option', 'name'];
+    let receipt = receiptFields.reduce((acc, key) => {
+      acc[key] = document.getElementById(key).innerHTML;
+      return acc
+    }, {});
+/*     let receipt = { 
       'adress': document.getElementById("adress").innerHTML,
       'totalSum': document.getElementById("totalSum").innerHTML,
       'message' : document.getElementById("message").innerHTML,
@@ -43,8 +47,9 @@ export class OrderOverviewComponent implements OnInit {
       'deliveryOption': document.getElementById("deliveryOption").innerHTML,
       'option': document.getElementById("option").innerHTML, 
       'name': document.getElementById("name").innerHTML, 
-  };
-    localStorage.setItem('receipt',JSON.stringify(receipt));
+  }; */
+ 
+    localStorage.setItem('receipt',JSON.stringify({ receipt, cart: this.store }));
   }
 
 

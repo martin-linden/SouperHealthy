@@ -18,15 +18,17 @@ export class SoupComponent implements OnInit, OnDestroy {
   private sub: any;
   soups: any;
   amount: number;
+  cartSoup: any; 
 
   addSoups() {
     /* alert('+1 was clicked') */
-    this.soupsStore.addSoup(this.soup.slug)
+    this.amount = this.soupsStore.addSoup(this.soup.slug)
   }
   
   removeSoups() {
     /* alert('+1 was clicked') */
-    this.soupsStore.removeSoup(this.soup.slug)
+    this.amount = this.soupsStore.removeSoup(this.soup.slug)
+    console.log(this.soupsStore.soups)
   }
 
  /*  getSoupAmount() {
@@ -60,8 +62,8 @@ export class SoupComponent implements OnInit, OnDestroy {
       /* console.log(params) */
       this.slug = params['slug']; // (+) converts string 'id' to a number
       this.soup = this.soups.find(soup => soup.slug == this.slug)
-
-     
+      this.cartSoup = this.soupsStore.soups.find(soup => soup.title == this.slug)
+      this.amount = this.cartSoup ? this.cartSoup.amount : 0;
     });
   }
 

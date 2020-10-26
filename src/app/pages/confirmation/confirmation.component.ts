@@ -11,12 +11,14 @@ import SoupJson from '../../../assets/soups.json';
 export class ConfirmationComponent implements OnInit {
   receiptData: any;
   store: any
+  soupReceiptData: any;
 
   constructor(private router: Router, public soupsStore: SoupsStoreService) {
     this.store = soupsStore.soups
     
-    this.receiptData = JSON.parse(localStorage.getItem('receipt'))
-    console.log(this.receiptData) 
+    this.receiptData = JSON.parse(localStorage.getItem('receipt')).receipt;
+    this.soupReceiptData = JSON.parse(localStorage.getItem('receipt')).cart
+    console.log(this.soupReceiptData) 
 
     
    }

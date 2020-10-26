@@ -42,7 +42,8 @@ export class SoupsStoreService {
         this._soups.next(val);
     }
 
-    async addSoup(title: string) {
+    addSoup(title: string) {
+        let amount = 1;
         //todo: fix this one.
         if (title && title.length) {
 
@@ -58,10 +59,12 @@ export class SoupsStoreService {
             //isf lägg till amount = amount + 1 //jag skulle ta bort amount?
             if (this.soups.some(soup => soup.title == title)) {
                 // Soppan finns redan
+                
                 this.soups.find(soup => soup.title == title).amount += 1;
                /*  this.soups = [
                     ...this.soups
                 ]; */
+                amount = this.soups.find(soup => soup.title == title).amount;
             } else {
 
             this.soups = [
@@ -69,27 +72,28 @@ export class SoupsStoreService {
                 tmpSoup
             ];
         }
-
+        return amount;
 
         }
 
     }
 
-    async removeSoup(title: string) {
+    removeSoup(title: string) {
         // optimistic update
         // todo: skriv om denna så att den minskar soppan id med ett
         const soup = this.soups.find(t => t.title === title);
         if (!soup) {
-            return;
+            return 0;
         }
         if (soup.amount == 1) {
             //sista soppan, OK att ta bort hela
             this.soups = this.soups.filter(soup => soup.title !== title);
+            return 0;
         } else {
             soup.amount -= 1;
             // inte sista soppan, minska med ett
         }
-        
+        return soup.amount;
         //Tar bort alla soppor just nu
        
     }
