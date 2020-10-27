@@ -31,12 +31,6 @@ export class SoupComponent implements OnInit, OnDestroy {
     console.log(this.soupsStore.soups)
   }
 
-  styledButton(){
-    if(this.amount > 0){
-      return '100%'
-    }
-  }
-
 
   constructor(private route: ActivatedRoute, public soupsStore: SoupsStoreService) {
     this.soups = SoupJson;

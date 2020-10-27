@@ -83,9 +83,7 @@ export class OrderOverviewComponent implements OnInit {
   }
   ngOnInit() {
    
-    /*   var deliveryInfo = JSON.parse(localStorage.getItem('data'))
-      console.log(deliveryInfo)
-      return deliveryInfo */
+    window.scrollTo(0 , 0)
     
   }
 

@@ -15,6 +15,7 @@ import { DeliveryInfoComponent } from './pages/delivery-info/delivery-info.compo
 import { OrderOverviewComponent } from './pages/order-overview/order-overview.component';
 import { ConfirmationComponent } from './pages/confirmation/confirmation.component';
 import { WizardComponent } from './components/wizard/wizard.component';
+import { SoupBannerComponent } from './components/soup-banner/soup-banner.component';
 
 
 @NgModule({
@@ -32,6 +33,7 @@ import { WizardComponent } from './components/wizard/wizard.component';
     OrderOverviewComponent,
     ConfirmationComponent,
     WizardComponent,
+    SoupBannerComponent,
 
   ],
   imports: [
