@@ -9,16 +9,24 @@ import SoupJson from '../../../assets/soups.json';
   styleUrls: ['./confirmation.component.scss']
 })
 export class ConfirmationComponent implements OnInit {
-  receiptData: any;
+  
   store: any
-  soupReceiptData: any;
+  cartData: any;
+  infoData: any;
+  totalSum: any;
+
 
   constructor(private router: Router, public soupsStore: SoupsStoreService) {
+    
     this.store = soupsStore.soups
     
-    this.receiptData = JSON.parse(localStorage.getItem('receipt')).receipt;
-    this.soupReceiptData = JSON.parse(localStorage.getItem('receipt')).cart
-   /*  console.log(this.soupReceiptData)  */
+    this.totalSum = JSON.parse(localStorage.getItem('receipt'))
+    this.cartData = JSON.parse(localStorage.getItem('receipt')).cart
+    this.infoData = JSON.parse(localStorage.getItem('receipt')).info
+
+ 
+    console.log(this.cartData)
+    console.log(this.infoData)
 
     
    }

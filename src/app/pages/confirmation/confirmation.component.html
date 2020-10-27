@@ -17,17 +17,17 @@
       </tr>
       <tr>
         <td>Kund:</td> 
-        <td>{{receiptData.name}}</td>
+        <td>{{infoData.name}}</td>
       </tr>
-      <tr>
+     <!--  <tr>
         <td>Orderdatum:</td> 
-        <td>{{receiptData.date}}</td>
-      </tr>
+        <td>{{infoData.select}}</td>
+      </tr> -->
       <tr>
         <td>Leveransval:</td> 
-        <td>{{receiptData.option}}</td>
+        <td>{{infoData.selectOne}}</td>
       </tr>
-      <ng-container *ngIf="receiptData.option === 'Hämtar i restaurang'">
+      <ng-container *ngIf="infoData.option === 'Hämtar i restaurang'">
         <tr>
           <td>Restaurangadress:</td> 
           <td>Odengatan 5</td>
@@ -35,19 +35,19 @@
       </ng-container>
       <tr>
         <td>Leveransval (tid):</td> 
-        <td>{{receiptData.deliveryOption}}</td>
+        <td>{{infoData.select}}</td>
       </tr>
-      <ng-container *ngIf="receiptData.option === 'Leverans till adress'">
+      <ng-container *ngIf="infoData.option === 'Leverans till adress'">
       <tr>
         <td>Leveransadress:</td> 
-        <td>{{receiptData.adress}}</td>
+        <td>{{infoData.address}}</td>
       </tr>
     </ng-container>
    
      
-     <ng-container *ngIf="receiptData.message">
+     <ng-container *ngIf="infoData.message">
         <h5>Meddelande till bud:</h5> 
-        <p>{{receiptData.message}}</p>
+        <p>{{infoData.textarea}}</p>
       </ng-container>
     </tbody>
     </table>
@@ -58,7 +58,7 @@
           <th align="left">Soppa</th>
           <th align="left">Antal</th>
         </tr>
-    <tr *ngFor="let soup of soupReceiptData">
+    <tr *ngFor="let soup of cartData">
       <td id="soupTitle" *ngIf="soup.title">{{soup.title}}</td> 
       <td *ngIf="soup.amount">{{soup.amount}} st</td>
     </tr>
@@ -66,6 +66,5 @@
   </table>
     <hr>
     <h5>Order id: #00217 </h5>
-  <h4>{{receiptData.totalSum}}</h4> 
-</div>
+  <h4>Total summa: {{totalSum.totalSum}} kr</h4> 
 </div>
