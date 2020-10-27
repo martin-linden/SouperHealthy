@@ -1,0 +1,15 @@
+.container {
+  position: fixed;
+  background-color: #32936ff7;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: 0.3s ease-in-out;
+}
+
+.content {
+  display: flex;
+  justify-content: space-around;
+  color: #fff;
+}

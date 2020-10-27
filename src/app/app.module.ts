@@ -16,6 +16,7 @@ import { OrderOverviewComponent } from './pages/order-overview/order-overview.co
 import { ConfirmationComponent } from './pages/confirmation/confirmation.component';
 import { WizardComponent } from './components/wizard/wizard.component';
 import { SoupBannerComponent } from './components/soup-banner/soup-banner.component';
+import { SoupMenuBannerComponent } from './components/soup-menu-banner/soup-menu-banner.component';
 
 
 @NgModule({
@@ -34,6 +35,7 @@ import { SoupBannerComponent } from './components/soup-banner/soup-banner.compon
     ConfirmationComponent,
     WizardComponent,
     SoupBannerComponent,
+    SoupMenuBannerComponent,
 
   ],
   imports: [
