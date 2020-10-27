@@ -2,11 +2,17 @@
 <form #f="ngForm" [ngFormOptions]="{updateOn: 'blur'}" novalidate>
     <h2>Leveransinformation</h2>
     <div class="delivery-info-container">
-        <select id="selectOne" (change)="changeSelect()" name="selectOne" ngModel={{localFormData.selectOne}}>
+       <!--  <select id="selectOne" (change)="changeSelect()" name="selectOne" ngModel={{localFormData.selectOne}}>
             <option id="delivery" value="Leverans till adress">Leverans till adress</option>
             <option id="pickup" value="Hämtar i restaurang">Hämtar i restaurang</option>
-          </select>
-        <div class="input-container">
+          </select> -->
+        <input type="radio" id="adress" name="deliveryOption" value="Leverans till adress" ngModel={{localFormData.deliveryOption}}>
+         <label for="adress">Leverans till adress</label><br>
+    
+        <input type="radio" id="get" name="deliveryOption" value="Hämtar i restaurang" ngModel={{localFormData.deliveryOption}}>
+         <label for="get">Hämtar i restaurang</label><br>
+        
+         <div class="input-container">
             <div class="input-content-container">
                 <img src="../../../assets/images/svg/guest.svg">
                 <p>Namn</p>
@@ -29,7 +35,7 @@
             </div>
             <input type="phone" name="phone" placeholder="Telefon" ngModel={{localFormData.phone}}>
         </div>
- <!-- <ng-container *ngIf="localFormData.selectOne === 'Leverans'">  -->
+<!--  <ng-container *ngIf="localFormData.selectOne === 'Leverans till adress'">   -->
         <div class="input-container">
             <div class="input-content-container">
                 <img src="../../../assets/images/svg/adress.svg">
@@ -45,7 +51,7 @@
             </div>
             <input type="text"  name="postnumber" placeholder="Postnummer" ngModel={{localFormData.postnumber}}>
         </div>
-  <!--   </ng-container>  -->
+<!--  </ng-container>   -->
         </div> 
   
     <div class="textarea-main">
@@ -57,16 +63,17 @@
             <textarea class="text"  name="textarea" placeholder="Extra information till bud (portkod, våning, mm)" ngModel={{localFormData.textarea}}></textarea>
         </div>
     </div>
+   
+    <input type="radio" id="asap" name="deliveryTime" value="Snarast" ngModel={{localFormData.deliveryTime}}>
+    <label for="asap">Snarast</label><br>
+    
+    <input type="radio" id="other" name="deliveryTime" value="Annat datum/tid" ngModel={{localFormData.deliveryTime}}>
+    <label for="other">Annat datum/tid</label><br>
 
-
-
-<select id="select" name="select" ngModel={{localFormData.select}}>
-  <option value="Snarast">Snarast</option>
-  <option value="Annat datum/tid">Annat datum/tid</option>
-</select>
-
-<!-- <input (click)="checkBoxValue()" type="checkbox" id="checkbox1" value={test} name="pickup">
- -->
+    <h5>Välj datumet du vill beställa från oss</h5>
+    <input type="date" id="birthday" name="date" ngModel={{localFormData.date}}>
+    
+    <h5>Välj någon av våra öppna tider</h5>
     <div class="time-container">
         <div class="column">
                 <button>15:00 - 16:00></button> 
@@ -84,3 +91,9 @@
     <button type=submit (click)="submit(f.value)">Nästa</button>
         </a>
 </form>
+
+
+<!-- <select id="select" name="select" ngModel={{localFormData.select}}>
+    <option value="Snarast">Snarast</option>
+    <option value="Annat datum/tid">Annat datum/tid</option>
+  </select> -->

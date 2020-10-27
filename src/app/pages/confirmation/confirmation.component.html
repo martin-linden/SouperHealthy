@@ -25,9 +25,9 @@
       </tr> -->
       <tr>
         <td>Leveransval:</td> 
-        <td>{{infoData.selectOne}}</td>
+        <td>{{infoData.deliveryOption}}</td>
       </tr>
-      <ng-container *ngIf="infoData.option === 'Hämtar i restaurang'">
+      <ng-container *ngIf="infoData.deliveryOption === 'Hämtar i restaurang'">
         <tr>
           <td>Restaurangadress:</td> 
           <td>Odengatan 5</td>
@@ -35,9 +35,9 @@
       </ng-container>
       <tr>
         <td>Leveransval (tid):</td> 
-        <td>{{infoData.select}}</td>
+        <td>{{infoData.deliveryTime}}</td>
       </tr>
-      <ng-container *ngIf="infoData.option === 'Leverans till adress'">
+      <ng-container *ngIf="infoData.deliveryOption === 'Leverans till adress'">
       <tr>
         <td>Leveransadress:</td> 
         <td>{{infoData.address}}</td>
