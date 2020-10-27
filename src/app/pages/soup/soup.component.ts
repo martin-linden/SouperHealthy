@@ -31,22 +31,11 @@ export class SoupComponent implements OnInit, OnDestroy {
     console.log(this.soupsStore.soups)
   }
 
- /*  getSoupAmount() {
-    return this.soupsStore.soups.map(item => {
-      item.amount
-      console.log(item.amount)
-    })
-} */
-
-/*   displayButton(){
-    if(!this.soupsStore.soups){
-      console.log('error')
-    } else{
-      this.soupsStore.soups(this.soup.slug)
-      console.log(this.soupsStore.soups)
+  styledButton(){
+    if(this.amount > 0){
+      return '100%'
     }
-  } */
-
+  }
 
 
   constructor(private route: ActivatedRoute, public soupsStore: SoupsStoreService) {

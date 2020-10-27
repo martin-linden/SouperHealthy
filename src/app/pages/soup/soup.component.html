@@ -34,13 +34,12 @@
 
     </div>
     <div class="buttons">
-       <span>{{amount}}</span>
-       <button class="remove-btn" (click)="removeSoups()">Ta bort -1</button> 
-       <button class="add-btn" (click)="addSoups()">Lägg till +1</button>
+       <button [ngStyle]="{ 'opacity': amount > 0 ? '100%' : '40%',
+                            'pointer-events': amount > 0 ? '' : 'none'}" class="remove-btn" (click)="removeSoups()">Ta bort</button> 
+       <button class="add-btn" (click)="addSoups()">Lägg till</button>
     </div>
+    <span>{{amount}}</span>
   
 </div>
 
-<!-- *ngIf="soupsStore.soups[0].amount" -->
-
-<!-- *ngIf="soupsStore.soups.amount"  -->
+<!-- *ngIf="amount > 0" -->

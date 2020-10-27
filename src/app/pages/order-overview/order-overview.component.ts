@@ -62,6 +62,7 @@ export class OrderOverviewComponent implements OnInit {
     console.log(this.store)
     let totalAmount = this.store;
     totalAmount.forEach(element => element.amount = 0)
+    console.log(this.store) 
 }
   
   
