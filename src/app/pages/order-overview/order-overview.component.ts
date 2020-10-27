@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import SoupJson from '../../../assets/soups.json';
 import { Router } from '@angular/router';
 import { SoupsStoreService } from '../../soups-store.service';
+import { element } from 'protractor';
 
 @Component({
   selector: 'app-order-overview',
@@ -56,6 +57,12 @@ export class OrderOverviewComponent implements OnInit {
   removeLocal(){
     localStorage.removeItem('data')
   }
+
+  removeAllSoups(){
+    console.log(this.store)
+    let totalAmount = this.store;
+    totalAmount.forEach(element => element.amount = 0)
+}
   
   
 

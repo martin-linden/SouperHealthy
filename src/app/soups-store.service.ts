@@ -93,18 +93,9 @@ export class SoupsStoreService {
             soup.amount -= 1;
             // inte sista soppan, minska med ett
         }
-        return soup.amount;
-        //Tar bort alla soppor just nu
-       
+        return soup.amount;       
     }
+
+  
 }
 
-//gammal kod under (som den va från början)
-/* async removeSoup(id: string) {
-    // optimistic update
-    // todo: skriv om denna så att den minskar soppan id med ett
-
-    const soup = this.soups.find(t => t.id === id);
-    this.soups = this.soups.filter(soup => soup.id !== id);
-
-} */

@@ -18,7 +18,7 @@ export class ConfirmationComponent implements OnInit {
     
     this.receiptData = JSON.parse(localStorage.getItem('receipt')).receipt;
     this.soupReceiptData = JSON.parse(localStorage.getItem('receipt')).cart
-    console.log(this.soupReceiptData) 
+   /*  console.log(this.soupReceiptData)  */
 
     
    }
