@@ -20,7 +20,7 @@ export class OrderOverviewComponent implements OnInit {
   constructor(private router: Router, public soupsStore: SoupsStoreService) { 
     this.soups = SoupJson;
     this.store = soupsStore.soups
-    this.localData = JSON.parse(localStorage.getItem('data'))
+    this.localData = JSON.parse(sessionStorage.getItem('data'))
     console.log(this.localData)
     let today = new Date()
 
@@ -42,12 +42,12 @@ export class OrderOverviewComponent implements OnInit {
       return acc
     }, {});
  */
-    localStorage.setItem('receipt',JSON.stringify({ cart: this.store, info: this.localData, totalSum: this.calcTotalSum()}));
+    sessionStorage.setItem('receipt',JSON.stringify({ cart: this.store, info: this.localData, totalSum: this.calcTotalSum()}));
   }
 
 
   removeLocal(){
-    localStorage.removeItem('data')
+    sessionStorage.removeItem('data')
   }
 
   removeAllSoups(){

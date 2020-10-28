@@ -1,5 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 
+import { SoupsStoreService } from '../../soups-store.service';
+
 @Component({
   selector: 'app-soup-menu-banner',
   templateUrl: './soup-menu-banner.component.html',
@@ -7,11 +9,11 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class SoupMenuBannerComponent implements OnInit {
 
-  @Input() store: any;
+  //@Input() store: any;
   @Input() soups: any;
 
   calcTotalSum() {
-    return this.store.reduce((acc, item) => {
+    return this.soupsStore.soups.reduce((acc, item) => {
       const price = this.soups.find(soup => soup.slug == item.title).price 
       /* if (!price) {
         return;
@@ -24,11 +26,12 @@ export class SoupMenuBannerComponent implements OnInit {
   }
 
   getCartAmount() {
-    return this.store.reduce((acc, item) => (acc += item.amount), 0)
+    return this.soupsStore.soups.reduce((acc, item) => (acc += item.amount), 0)
   }
 
 
-  constructor() { }
+  constructor(public soupsStore: SoupsStoreService) {
+  }
 
   ngOnInit() {
   }

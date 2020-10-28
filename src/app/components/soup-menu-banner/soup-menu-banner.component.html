@@ -1,6 +1,7 @@
-<div class="container" [ngStyle]="{ 'opacity': getCartAmount() > 0 ? '100%' : '0%'}">
+<div class="container"  [ngStyle]="{ 'opacity': getCartAmount() > 0 ? '100%' : '0%'}" >
     <div class="content">
         <p>Antal soppor: {{getCartAmount()}} st</p>
         <p>Total kostnad: {{calcTotalSum()}} kr</p>
     </div>  
 </div>
+

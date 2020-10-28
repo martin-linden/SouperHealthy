@@ -19,7 +19,7 @@ export class DeliveryInfoComponent implements OnInit {
   
   submit(value){
     // om hämtas i butiken är vald
-    localStorage.setItem('data',JSON.stringify(value));
+    sessionStorage.setItem('data',JSON.stringify(value));
   }
 
   time(){

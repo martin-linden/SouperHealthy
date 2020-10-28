@@ -14,11 +14,11 @@ export class SoupCardComponent implements OnInit {
 
   @Input() soup: any;
  /*  @Input() receivedParentMessage: string; */
-  @Output() notify: EventEmitter<any> = new EventEmitter<any>()
+  //@Output() notify: EventEmitter<any> = new EventEmitter<any>()
 
 
   onCardClicked() {
-    this.notify.emit(this.soup.slug + " was clicked")
+    //this.notify.emit(this.soup.slug + " was clicked")
     /* console.log(this.soup.slug) */
     this.router.navigate(['/soup', this.soup.slug]); // kolla om +1 är klickat, isf gör något annat :) 
 
@@ -27,7 +27,10 @@ export class SoupCardComponent implements OnInit {
 
   addSoups() {
     /* alert('+1 was clicked') */
+    console.log("AddSoups inside soup-card" + this.soup.slug)
     this.soupsStore.addSoup(this.soup.slug)
+  //   // this.amount = this.soupsStore.addSoup(Object.assign({amount: 1}, this.soup.slug))
+    
   }
 
 

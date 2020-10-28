@@ -20,9 +20,9 @@ export class ConfirmationComponent implements OnInit {
     
     this.store = soupsStore.soups
     
-    this.totalSum = JSON.parse(localStorage.getItem('receipt'))
-    this.cartData = JSON.parse(localStorage.getItem('receipt')).cart
-    this.infoData = JSON.parse(localStorage.getItem('receipt')).info
+    this.totalSum = JSON.parse(sessionStorage.getItem('receipt'))
+    this.cartData = JSON.parse(sessionStorage.getItem('receipt')).cart
+    this.infoData = JSON.parse(sessionStorage.getItem('receipt')).info
 
  
     console.log(this.cartData)

@@ -23,6 +23,10 @@ export class SoupComponent implements OnInit, OnDestroy {
   addSoups() {
     /* alert('+1 was clicked') */
     this.amount = this.soupsStore.addSoup(this.soup.slug)
+  
+      // this.amount = this.soupsStore.addSoup(Object.assign({amount: 1}, this.soup.slug))
+  
+    // todo: add force showing top thing with cart
   }
   
   removeSoups() {

@@ -14,6 +14,7 @@ export class BottomNavComponent implements OnInit {
    /*  console.log(soupsStore.soups) */
   }
   getCartAmount() {
+    console.log(this.soupsStore.soups)
   return this.soupsStore.soups.reduce((acc, item) => (acc += item.amount), 0)
 }
   ngOnInit() {

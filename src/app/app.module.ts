@@ -20,6 +20,7 @@ import { SoupBannerComponent } from './components/soup-banner/soup-banner.compon
 import { SoupMenuBannerComponent } from './components/soup-menu-banner/soup-menu-banner.component';
 import { TimerComponent } from './components/timer/timer.component';
 import { FeedbackComponent } from './components/feedback/feedback.component';
+import { MenuComponent } from './pages/menu/menu.component';
 
 
 @NgModule({
@@ -41,6 +42,7 @@ import { FeedbackComponent } from './components/feedback/feedback.component';
     SoupMenuBannerComponent,
     TimerComponent,
     FeedbackComponent,
+    MenuComponent,
 
   ],
   imports: [
