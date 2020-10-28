@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import {FormsModule}   from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
@@ -17,6 +18,8 @@ import { ConfirmationComponent } from './pages/confirmation/confirmation.compone
 import { WizardComponent } from './components/wizard/wizard.component';
 import { SoupBannerComponent } from './components/soup-banner/soup-banner.component';
 import { SoupMenuBannerComponent } from './components/soup-menu-banner/soup-menu-banner.component';
+import { TimerComponent } from './components/timer/timer.component';
+import { FeedbackComponent } from './components/feedback/feedback.component';
 
 
 @NgModule({
@@ -36,12 +39,15 @@ import { SoupMenuBannerComponent } from './components/soup-menu-banner/soup-menu
     WizardComponent,
     SoupBannerComponent,
     SoupMenuBannerComponent,
+    TimerComponent,
+    FeedbackComponent,
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
