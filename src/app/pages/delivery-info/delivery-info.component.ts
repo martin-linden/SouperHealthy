@@ -21,14 +21,12 @@ export class DeliveryInfoComponent implements OnInit {
     // om hämtas i butiken är vald
     localStorage.setItem('data',JSON.stringify(value));
   }
-/* 
-  eatInOut(){
-    let checkbox = document.getElementById("delivery");
-    console.log(checkbox.id)
-  
-    
+
+  time(){
+    let test = document.getElementById("time1").innerText;
+   console.log(test)
+
   }
- */
 
 changeSelect(value) {
   console.log(value);

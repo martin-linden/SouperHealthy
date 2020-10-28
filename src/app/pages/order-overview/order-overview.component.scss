@@ -65,8 +65,8 @@
       margin-top: 15px;
 
       .icon-edit-wrapper {
-        position: absolute;
-        margin-left: 240px;
+        position: inherit;
+        /* margin-left: 240px; */
         margin-bottom: 15px;
         display: flex;
         flex-direction: column;

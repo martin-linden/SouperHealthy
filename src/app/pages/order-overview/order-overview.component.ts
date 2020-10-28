@@ -21,6 +21,7 @@ export class OrderOverviewComponent implements OnInit {
     this.soups = SoupJson;
     this.store = soupsStore.soups
     this.localData = JSON.parse(localStorage.getItem('data'))
+    console.log(this.localData)
     let today = new Date()
 
     let dd = String(today.getDate()).padStart(2, '0');
