@@ -11,7 +11,7 @@ export class AppComponent {
   pathname: string;
 
 
-  constructor(private router: Router,) {
+  constructor(public router: Router,) {
     
    
 

@@ -15,7 +15,7 @@ export class SoupComponent implements OnInit, OnDestroy {
 
   slug: any;
   soup: any;
-  private sub: any;
+  public sub: any;
   soups: any;
   amount: number;
   cartSoup: any; 
@@ -36,7 +36,7 @@ export class SoupComponent implements OnInit, OnDestroy {
   }
 
 
-  constructor(private route: ActivatedRoute, public soupsStore: SoupsStoreService) {
+  constructor(public route: ActivatedRoute, public soupsStore: SoupsStoreService) {
     this.soups = SoupJson;
 
   }

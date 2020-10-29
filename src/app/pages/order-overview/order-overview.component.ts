@@ -18,7 +18,7 @@ export class OrderOverviewComponent implements OnInit {
   time: any
   today: string
 
-  constructor(private router: Router, public soupsStore: SoupsStoreService) { 
+  constructor(public router: Router, public soupsStore: SoupsStoreService) { 
     this.soups = SoupJson;
     this.store = soupsStore.soups
    /*  this.localData = JSON.parse(sessionStorage.getItem('data')) */

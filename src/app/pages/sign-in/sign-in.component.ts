@@ -13,7 +13,7 @@ export class SignInComponent implements OnInit {
     this.router.navigate(['/delivery-info']);
   };
 
-  constructor(private router: Router,) { }
+  constructor(public router: Router,) { }
 
   ngOnInit() {
   }

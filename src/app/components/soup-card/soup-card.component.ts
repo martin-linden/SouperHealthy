@@ -34,7 +34,7 @@ export class SoupCardComponent implements OnInit {
   }
 
 
-  constructor(private router: Router, public soupsStore: SoupsStoreService) {
+  constructor(public router: Router, public soupsStore: SoupsStoreService) {
 
   }
   ngOnInit() {

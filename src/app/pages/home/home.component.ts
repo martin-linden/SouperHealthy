@@ -9,11 +9,7 @@ import { Router } from '@angular/router';
 export class HomeComponent implements OnInit {
 
 
-/*   routerChange(){
-    this.router.navigate(['/menu']) 
-  }
- */
-  constructor(private router: Router) { }
+  constructor(public router: Router) { }
 
   ngOnInit() {
     /* setTimeout(this.routerChange, 2000) */

@@ -16,7 +16,7 @@ export class ConfirmationComponent implements OnInit {
   totalSum: any;
 
 
-  constructor(private router: Router, public soupsStore: SoupsStoreService) {
+  constructor(public router: Router, public soupsStore: SoupsStoreService) {
     
     this.store = soupsStore.soups
     

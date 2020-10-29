@@ -30,7 +30,7 @@ changeSelect(value) {
 }
 
 
-  constructor(private router: Router,) {
+  constructor(public router: Router,) {
     let localFormData = JSON.parse(Cookies.get('data'))
     console.log(this.localData) 
     
