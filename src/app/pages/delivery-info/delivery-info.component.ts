@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import Cookies from 'js-cookie';
 
 @Component({
   selector: 'app-delivery-info',
@@ -19,14 +20,10 @@ export class DeliveryInfoComponent implements OnInit {
   
   submit(value){
     // om hämtas i butiken är vald
-    sessionStorage.setItem('data',JSON.stringify(value));
+    Cookies.set('data',JSON.stringify(value));
   }
 
-  time(){
-    let test = document.getElementById("time1").innerText;
-   console.log(test)
-
-  }
+ 
 
 changeSelect(value) {
   console.log(value);
@@ -34,7 +31,7 @@ changeSelect(value) {
 
 
   constructor(private router: Router,) {
-    let localFormData = JSON.parse(localStorage.getItem('data'))
+    let localFormData = JSON.parse(Cookies.get('data'))
     console.log(this.localData) 
     
     if(!localFormData){
