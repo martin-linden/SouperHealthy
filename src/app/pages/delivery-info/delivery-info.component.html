@@ -6,10 +6,10 @@
             <option id="delivery" value="Leverans till adress">Leverans till adress</option>
             <option id="pickup" value="Hämtar i restaurang">Hämtar i restaurang</option>
           </select> -->
-        <input type="radio" id="adress" name="deliveryOption" value="Leverans till adress" ngModel>
+        <input type="radio" id="adress" name="deliveryOption" value="Leverans till adress" ngModel={{localFormData.deliveryOption}}>
          <label for="adress">Leverans till adress</label><br>
     
-        <input type="radio" id="get" name="deliveryOption" value="Hämtar i restaurang" ngModel>
+        <input type="radio" id="get" name="deliveryOption" value="Hämtar i restaurang" ngModel={{localFormData.deliveryOption}}>
          <label for="get">Hämtar i restaurang</label><br>
         
          <div class="input-container">
@@ -17,7 +17,7 @@
                 <img src="../../../assets/images/svg/guest.svg">
                 <p>Namn</p>
             </div>
-            <input type="text" name="name" placeholder="Mottagarens namn" ngModel>
+            <input type="text" name="name" placeholder="Mottagarens namn" ngModel={{localFormData.name}} >
         </div>
 
         <div class="input-container">
@@ -25,7 +25,7 @@
                 <img src="../../../assets/images/svg/mail.svg">
                 <p>Email</p>
             </div>
-            <input type="email" name="email" placeholder="Email" ngModel>
+            <input type="email" name="email" placeholder="Email" ngModel={{localFormData.email}}>
         </div>
 
         <div class="input-container">
@@ -33,7 +33,7 @@
                 <img src="../../../assets/images/svg/telephone.svg">
                 <p>Telefon</p>
             </div>
-            <input type="phone" name="phone" placeholder="Telefon" ngModel>
+            <input type="phone" name="phone" placeholder="Telefon" ngModel={{localFormData.phone}}>
         </div>
 <!--  <ng-container *ngIf="localFormData.selectOne === 'Leverans till adress'">   -->
         <div class="input-container">
@@ -41,7 +41,7 @@
                 <img src="../../../assets/images/svg/adress.svg">
                 <p>Adress</p>
             </div>
-            <input type="text"  name="address" placeholder="Adress" ngModel>
+            <input type="text"  name="address" placeholder="Adress" ngModel={{localFormData.address}}>
         </div>
 
         <div class="input-container">
@@ -49,7 +49,7 @@
                 <img src="../../../assets/images/svg/post-number.svg">
                 <p>Postnummer</p>
             </div>
-            <input type="text"  name="postnumber" placeholder="Postnummer" ngModel>
+            <input type="text"  name="postnumber" placeholder="Postnummer" ngModel={{localFormData.postnumber}}>
         </div>
 <!--  </ng-container>   -->
         </div> 
@@ -60,18 +60,18 @@
                 <p>Meddelande till bud</p>
                 <img src="../../../assets/images/svg/alert.svg">
             </div>
-            <textarea class="text"  name="textarea" placeholder="Extra information till bud (portkod, våning, mm)" ngModel></textarea>
+            <textarea class="text"  name="textarea" placeholder="Extra information till bud (portkod, våning, mm)" ngModel={{localFormData.textarea}}></textarea>
         </div>
     </div>
    
-    <input type="radio" id="asap" name="deliveryTime" value="Snarast" ngModel>
+    <input type="radio" id="asap" name="deliveryTime" value="Snarast" ngModel={{localFormData.deliveryTime}}>
     <label for="asap">Snarast</label><br>
     
-    <input type="radio" id="other" name="deliveryTime" value="Annat datum/tid" ngModel>
+    <input type="radio" id="other" name="deliveryTime" value="Annat datum/tid" ngModel={{localFormData.deliveryTime}}>
     <label for="other">Annat datum/tid</label><br>
 
     <h5>Välj datumet du vill beställa från oss</h5>
-    <input type="date" id="birthday" name="date" ngModel>
+    <input type="date" id="birthday" name="date" ngModel={{localFormData.date}}>
     
     <h5>Välj någon av våra öppna tider</h5>
     <div class="time-container">

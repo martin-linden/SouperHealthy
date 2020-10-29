@@ -22,7 +22,7 @@ export class OrderOverviewComponent implements OnInit {
     this.soups = SoupJson;
     this.store = soupsStore.soups
    /*  this.localData = JSON.parse(sessionStorage.getItem('data')) */
-   this.localData = JSON.parse(Cookies.get('data'));
+   this.localData = JSON.parse(localStorage.getItem('data'));
     console.log(this.localData)
     let today = new Date()
 

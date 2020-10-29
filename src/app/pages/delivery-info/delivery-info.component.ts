@@ -20,7 +20,7 @@ export class DeliveryInfoComponent implements OnInit {
   
   submit(value){
     // om hämtas i butiken är vald
-    Cookies.set('data',JSON.stringify(value));
+    localStorage.setItem('data',JSON.stringify(value));
   }
 
  
@@ -31,7 +31,7 @@ changeSelect(value) {
 
 
   constructor(public router: Router,) {
-   /*  let localFormData = JSON.parse(Cookies.get('data'))
+  let localFormData = JSON.parse(localStorage.getItem('data'))
     console.log(this.localData) 
     
     if(!localFormData){
@@ -39,7 +39,7 @@ changeSelect(value) {
     }else{
       this.localFormData = localFormData
       console.log(this.localFormData)
-    }  */
+    }  
 
 
     
