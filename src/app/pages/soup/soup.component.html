@@ -3,6 +3,7 @@
 
 
 <div class="main-container">
+    <app-soup-banner [amount]="amount" [soup]="soup" ></app-soup-banner>
     <img src="{{soup.img}}" class="soup-img">
     <div class="intro-wrapper">
         <h2>{{soup.name}}</h2>
@@ -34,7 +35,10 @@
 
     </div>
     <div class="buttons">
-        <!--  <button class="remove-btn">Ta bort</button> -->
-        <button class="add-btn">Lägg till</button>
+       <button [ngStyle]="{ 'opacity': amount > 0 ? '100%' : '40%',
+                            'pointer-events': amount > 0 ? '' : 'none'}" class="remove-btn" (click)="removeSoups()">Ta bort</button> 
+       <button class="add-btn" (click)="addSoups()">Lägg till</button>
     </div>
 </div>
+
+<!-- *ngIf="amount > 0" -->

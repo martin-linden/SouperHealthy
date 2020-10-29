@@ -1,6 +1,7 @@
 import { Component, OnInit, OnDestroy, Input } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import SoupJson from '../../../assets/soups.json';
+import { SoupsStoreService } from '../../soups-store.service';
 
 @Component({
   selector: 'app-soup',
@@ -12,15 +13,30 @@ import SoupJson from '../../../assets/soups.json';
 
 export class SoupComponent implements OnInit, OnDestroy {
 
-
-
   slug: any;
   soup: any;
   private sub: any;
   soups: any;
+  amount: number;
+  cartSoup: any; 
+
+  addSoups() {
+    /* alert('+1 was clicked') */
+    this.amount = this.soupsStore.addSoup(this.soup.slug)
+  
+      // this.amount = this.soupsStore.addSoup(Object.assign({amount: 1}, this.soup.slug))
+  
+    // todo: add force showing top thing with cart
+  }
+  
+  removeSoups() {
+    /* alert('+1 was clicked') */
+    this.amount = this.soupsStore.removeSoup(this.soup.slug)
+    console.log(this.soupsStore.soups)
+  }
 
 
-  constructor(private route: ActivatedRoute) {
+  constructor(private route: ActivatedRoute, public soupsStore: SoupsStoreService) {
     this.soups = SoupJson;
 
   }
@@ -33,8 +49,8 @@ export class SoupComponent implements OnInit, OnDestroy {
       /* console.log(params) */
       this.slug = params['slug']; // (+) converts string 'id' to a number
       this.soup = this.soups.find(soup => soup.slug == this.slug)
-      /* console.log(this.soup); */
-      // In a real app: dispatch action to load the details here.
+      this.cartSoup = this.soupsStore.soups.find(soup => soup.title == this.slug)
+      this.amount = this.cartSoup ? this.cartSoup.amount : 0;
     });
   }
 

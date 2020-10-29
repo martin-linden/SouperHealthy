@@ -11,9 +11,12 @@ export class BottomNavComponent implements OnInit {
 
   constructor(public soupsStore: SoupsStoreService) {
 
-    console.log(soupsStore.soups)
+   /*  console.log(soupsStore.soups) */
   }
-
+  getCartAmount() {
+    console.log(this.soupsStore.soups)
+  return this.soupsStore.soups.reduce((acc, item) => (acc += item.amount), 0)
+}
   ngOnInit() {
     // här kan du göra saker som körs 1  gång verkar det som
   }

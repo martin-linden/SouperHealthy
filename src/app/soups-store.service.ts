@@ -42,7 +42,8 @@ export class SoupsStoreService {
         this._soups.next(val);
     }
 
-    async addSoup(title: string) {
+    addSoup(title: string) {
+        let amount = 1;
         //todo: fix this one.
         if (title && title.length) {
 
@@ -52,63 +53,49 @@ export class SoupsStoreService {
             // and we just assume that the server will return success responses anyway most of the time.
             // if server returns an error, we just revert back the changes in the catch statement 
 
-            const tmpId = "23";
+            const tmpId = "23"; //vad gör den? hur får sopporna ett unikt id?
             const tmpSoup = { id: tmpId, title, amount: 1 };
             // skriv kod som kollar om en soppa med en viss title redan finns._soups
-            //isf lägg till amount = amount + 1
+            //isf lägg till amount = amount + 1 //jag skulle ta bort amount?
+            if (this.soups.some(soup => soup.title == title)) {
+                // Soppan finns redan
+                
+                this.soups.find(soup => soup.title == title).amount += 1;
+               /*  this.soups = [
+                    ...this.soups
+                ]; */
+                amount = this.soups.find(soup => soup.title == title).amount;
+            } else {
 
             this.soups = [
                 ...this.soups,
                 tmpSoup
             ];
-
+        }
+        return amount;
 
         }
 
     }
 
-    async removeSoup(id: string) {
+    removeSoup(title: string) {
         // optimistic update
         // todo: skriv om denna så att den minskar soppan id med ett
-
-        const soup = this.soups.find(t => t.id === id);
-        this.soups = this.soups.filter(soup => soup.id !== id);
-
+        const soup = this.soups.find(t => t.title === title);
+        if (!soup) {
+            return 0;
+        }
+        if (soup.amount == 1) {
+            //sista soppan, OK att ta bort hela
+            this.soups = this.soups.filter(soup => soup.title !== title);
+            return 0;
+        } else {
+            soup.amount -= 1;
+            // inte sista soppan, minska med ett
+        }
+        return soup.amount;       
     }
 
-    /*    async setCompleted(id: string, isCompleted: boolean) {
-           let soup = this.soups.find(soup => soup.id === id);
-   
-           if (soup) {
-               // optimistic update
-               const index = this.soups.indexOf(soup);
-   
-               this.soups[index] = {
-                   ...soup,
-                   isCompleted
-               }
-   
-               this.soups = [...this.soups];
-   
-               try {
-                   await this.soupsService
-                       .setCompleted(id, isCompleted)
-                       .toPromise();
-   
-               } catch (e) {
-   
-                   console.error(e);
-                   this.soups[index] = {
-                       ...soup,
-                       isCompleted: !isCompleted
-                   }
-               }
-           }
-       } */
-
-
-    /*     async fetchAll() {
-            this.soups = await this.soupsService.index().toPromise();
-        } */
-
+  
 }
+

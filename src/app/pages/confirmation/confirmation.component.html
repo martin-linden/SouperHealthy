@@ -1,0 +1,73 @@
+<app-wizard></app-wizard>
+<div class="container">
+    <h2>Tack för din beställning!</h2>
+
+    <div class="card-overview">
+      <div class="icon-wrapper">
+        <img src="../../../assets/images/svg/receipt.svg" id="icon">
+        <h4>Kvitto</h4>
+        <h5>Leverans:</h5>
+      </div>
+        <table>
+        <tbody>
+        
+      <tr>
+        <th align="left"></th>
+        <th align="left"></th>
+      </tr>
+      <tr>
+        <td>Kund:</td> 
+        <td>{{infoData.name}}</td>
+      </tr>
+     <!--  <tr>
+        <td>Orderdatum:</td> 
+        <td>{{infoData.select}}</td>
+      </tr> -->
+      <tr>
+        <td>Leveransval:</td> 
+        <td>{{infoData.deliveryOption}}</td>
+      </tr>
+      <ng-container *ngIf="infoData.deliveryOption === 'Hämtar i restaurang'">
+        <tr>
+          <td>Restaurangadress:</td> 
+          <td>Odengatan 5</td>
+        </tr>
+      </ng-container>
+      <tr>
+        <td>Leveransval (tid):</td> 
+        <td>{{infoData.deliveryTime}}</td>
+      </tr>
+      <ng-container *ngIf="infoData.deliveryOption === 'Leverans till adress'">
+      <tr>
+        <td>Leveransadress:</td> 
+        <td>{{infoData.address}}</td>
+      </tr>
+    </ng-container>
+   
+     
+     <ng-container *ngIf="infoData.message">
+        <h5>Meddelande till bud:</h5> 
+        <p>{{infoData.textarea}}</p>
+      </ng-container>
+    </tbody>
+    </table>
+    <h5>Din order:</h5>
+    <table>
+      <tbody>
+        <tr>
+          <th align="left">Soppa</th>
+          <th align="left">Antal</th>
+        </tr>
+    <tr *ngFor="let soup of cartData">
+      <td id="soupTitle" *ngIf="soup.title">{{soup.title}}</td> 
+      <td *ngIf="soup.amount">{{soup.amount}} st</td>
+    </tr>
+  </tbody>
+  </table>
+    <hr>
+    <h5>Order id: #00217 </h5>
+  <h4>Total summa: {{totalSum.totalSum}} kr</h4> 
+</div>
+<app-timer></app-timer>
+<hr width="80%">
+<app-feedback></app-feedback>

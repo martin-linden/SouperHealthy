@@ -1,0 +1,143 @@
+<app-wizard></app-wizard>
+<div class="container">
+    <h2>Orderöversikt</h2>
+
+    <div class="card-overview">
+      <div class="icon-wrapper">
+        <img src="../../../assets/images/svg/list.svg" id="icon">
+        <h4>Orderinfo</h4>
+      </div>
+        <table>
+        <tbody>
+      <tr>
+        <th align="left">Soppa</th>
+        <th align="left">Antal</th>
+        <th align="left">Ändra</th>
+      </tr>
+      <tr *ngFor="let soup of store">
+        <td id="soupTitle" *ngIf="soup.title">{{soup.title}}</td> 
+        <td *ngIf="soup.amount">{{soup.amount}} st</td>
+        <td *ngIf="soup.title"><img (click)="this.router.navigate(['/soup', soup.title])" src="../../../assets/images/svg/edit.svg"></td>
+      </tr>
+    <h5 id="totalSum">Total summa: {{calcTotalSum()}} kr </h5>
+    </tbody>
+    </table>
+</div>
+   
+<div class="card-overview">
+      <div class="icon-wrapper">
+        <img src="../../../assets/images/svg/bike.svg" id="icon">
+        <h4>Leveransinfo</h4>
+        <h6 *ngIf="localData.selectOne === 'Hämta'">Kunden hämtar i restaurang</h6>
+        <div class="icon-edit-wrapper" (click)="this.router.navigate(['/delivery-info'])">
+          <img src="../../../assets/images/svg/edit.svg" id="edit-icon">
+          <h5>Ändra</h5>
+        </div>
+        
+      </div>
+        <table>
+        <tbody>
+      <tr>
+        <th align="left"></th>
+        <th align="left"></th>
+      </tr>
+      <tr>
+        <td>Namn:</td> 
+        <td id="name">{{localData.name}}</td>
+      </tr>
+      <tr>
+        <td>Telefon:</td> 
+        <td>{{localData.phone}}</td>
+      </tr>
+      <tr>
+        <td>Email:</td> 
+        <td>{{localData.email}}</td>
+      </tr>
+     <!--  <ng-container *ngIf="localData.selectOne === 'Leverans'" > -->
+      <tr>
+        <td>Adress:</td> 
+        <td id="adress">{{localData.address}}</td>
+      </tr>
+      <tr>
+        <td>Postnummer:</td> 
+        <td>{{localData.postnumber}}</td>
+      </tr>
+    
+      <!-- <tr>
+        <td>Ort:</td> 
+        <td>Stockholm</td>
+      </tr> -->
+   
+    <h5>Meddelande till bud:</h5> 
+    <p id="message">{{localData.textarea}}</p>
+  <!-- </ng-container> -->
+    </tbody>
+    </table>
+    <hr>
+    <div class="time-container">
+      <div class="img-title">
+        <img src="../../../assets/images/svg/time.svg" id="edit-icon">
+        <h4>Tid & leveransval</h4>
+      </div>  
+      <table>
+        <tbody>
+      <tr>
+        <th align="left"></th>
+        <th align="left"></th>
+      </tr>
+      <tr>
+        <td>Leveransval:</td> 
+        <td id="option">{{localData.deliveryOption}}</td>
+      </tr>
+      <tr>
+        <td>Leveransval (tid):</td> 
+        <td id="deliveryOption">{{localData.deliveryTime}}</td>
+      </tr>
+      <tr>  
+        <td>Datum:</td> 
+        <td id="date" *ngIf="localData.deliveryTime === 'Snarast'">{{today}}</td>
+        <td id="date" *ngIf="localData.deliveryTime === 'Annat datum/tid'">{{localData.date}}</td>
+      </tr>
+      <ng-container *ngIf="localData.select === 'Snarast'">
+      <tr>
+        <td>Beräknad tid efter order:</td> 
+        <td>30 minuter</td> 
+      </tr>
+    </ng-container>
+    <ng-container *ngIf="localData.select === 'Annat datum/tid'">
+      <tr>
+        <td>Beställd tid:</td> 
+        <td>16.30</td> 
+      </tr>
+    </ng-container>
+ <!--    <tr *ngIf="localData.pickup">
+      <td>Restaurangadress:</td> 
+      <td>Odengatan 5</td> 
+    </tr> -->
+    </tbody>
+    </table>
+    </div>
+</div>
+<h2>Betalning</h2>
+
+    <div class="card-overview">
+      <div class="icon-wrapper">
+        <img src="../../../assets/images/svg/payment.svg" id="icon">
+        <h4>Välj betalningsmetod</h4>
+      </div>
+      <div class="button-wrapper">
+        <button (click)="this.router.navigate(['/confirmation']); submitReceipt(); removeLocal(); removeAllSoups()">
+          <div class="button-content">
+            <img src="../../../assets/images/svg/mastercard.svg" >
+            <p>Betalkort</p>
+          </div>
+        </button>
+        <button (click)="this.router.navigate(['/confirmation']); submitReceipt(); removeLocal()">
+          <div class="button-content">
+            <img src="../../../assets/images/svg/swish.svg" id="swish" >
+          </div>
+        </button>
+      </div> 
+</div>
+</div>
+

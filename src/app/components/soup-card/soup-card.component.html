@@ -1,4 +1,4 @@
-<div class="card-wrapper" (click)="onClicked()">
+<div class="card-wrapper" (click)="onCardClicked()">
     <img src="{{soup.img}}" class="soup-img">
     <div class="name-info-wrapper">
 
@@ -8,7 +8,7 @@
     <hr>
     <div class="text-button-wrapper">
         <p>{{soup.text}}</p>
-        <button class=" add-btn" (click)="onButtonClicked()">+1</button>
+        <button class=" add-btn" (click)="addSoups();$event.stopPropagation()">+1</button>
     </div>
     <hr>
     <div class="time-price-wrapper">

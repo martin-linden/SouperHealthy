@@ -1,0 +1,6 @@
+<div class="container" [ngStyle]="{ 'opacity': amount > 0 ? '100%' : '0%'}">
+    <div class="content">
+        <p>{{amount}} x {{soup.name}} {{soup.price}} kr</p>
+        <p>{{totalCost()}} kr</p>
+    </div>  
+</div>
