@@ -1,5 +1,5 @@
 <app-wizard></app-wizard>
-<form #f="ngForm" [ngFormOptions]="{updateOn: 'blur'}" novalidate>
+<form #f="ngForm" [ngFormOptions]="{updateOn: 'blur'}" validate >
     <h2>Leveransinformation</h2>
     <div class="delivery-info-container">
          <div class="input-container">
@@ -7,7 +7,7 @@
                 <img src="../../../assets/images/svg/guest.svg">
                 <p>Namn</p>
             </div>
-            <input type="text" name="name" placeholder="Mottagarens namn" ngModel={{localFormData.name}} >
+            <input type="text" name="name" placeholder="Mottagarens namn"  ngModel={{localFormData.name}}>
         </div>
 
         <div class="input-container">
