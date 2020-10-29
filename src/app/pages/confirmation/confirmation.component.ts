@@ -14,6 +14,7 @@ export class ConfirmationComponent implements OnInit {
   cartData: any
   infoData: any
   data: any
+  addressData: any;
 
 
   constructor(public router: Router, public soupsStore: SoupsStoreService) {
@@ -23,7 +24,8 @@ export class ConfirmationComponent implements OnInit {
     this.data = JSON.parse(sessionStorage.getItem('receipt'))
     this.cartData = JSON.parse(sessionStorage.getItem('receipt')).cart
     this.infoData = JSON.parse(sessionStorage.getItem('receipt')).info
-
+    this.addressData = JSON.parse(localStorage.getItem('address'))
+    
  
     console.log(this.cartData)
     console.log(this.infoData)

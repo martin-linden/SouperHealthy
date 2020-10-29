@@ -10,6 +10,12 @@ export class AddressComponent implements OnInit {
 
   constructor(public router: Router) { }
 
+    
+  submit(value){
+    // om hämtas i butiken är vald
+    localStorage.setItem('address',JSON.stringify(value));
+  }
+
   ngOnInit() {
   }
 

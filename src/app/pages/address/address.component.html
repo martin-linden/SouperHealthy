@@ -23,7 +23,7 @@
     </div>
     <input type="text"  name="ort" placeholder="ort" ngModel="Stockholm">
 </div>
-<button (click)="this.router.navigate(['/confirm-address'])" type=submit>Fortsätt</button>
+<button (click)="this.router.navigate(['/confirm-address']); submit(f.value)" type=submit>Fortsätt</button>
 </form>
 
 

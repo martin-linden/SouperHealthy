@@ -17,13 +17,16 @@ export class OrderOverviewComponent implements OnInit {
   localData: any
   time: any
   today: string
+  addressData: any;
 
   constructor(public router: Router, public soupsStore: SoupsStoreService) { 
     this.soups = SoupJson;
     this.store = soupsStore.soups
    /*  this.localData = JSON.parse(sessionStorage.getItem('data')) */
    this.localData = JSON.parse(localStorage.getItem('data'));
-    console.log(this.localData)
+   this.addressData = JSON.parse(localStorage.getItem('address'));
+    
+   console.log(this.localData)
     let today = new Date()
 
     let dd = String(today.getDate()).padStart(2, '0');
