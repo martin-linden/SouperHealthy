@@ -17,6 +17,7 @@ export class DeliveryInfoComponent implements OnInit {
   /* CheckedValue: boolean */
 
 
+
   
   submit(value){
     // om hämtas i butiken är vald

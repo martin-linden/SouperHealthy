@@ -39,19 +39,22 @@
     </div>
     <h5>Välj leverans till adress eller att hämta upp på vår restaurang på Odengatan 15</h5>
     <div class="delivery-option">
+      
         <input type="radio" id="adress" name="deliveryOption" value="Leverans till adress" ngModel={{localFormData.deliveryOption}}>
         <label for="adress">Leverans till adress</label><br>
-    
-       <input type="radio" id="get" name="deliveryOption" value="Hämtar i restaurang" ngModel={{localFormData.deliveryOption}}>
+       
+       <input  type="radio" id="get" name="deliveryOption" value="Hämtar i restaurang" ngModel={{localFormData.deliveryOption}}>
         <label for="get">Hämtar i restaurang</label><br>
     </div>
     
     <div class="delivery-option">
+ 
         <input type="radio" id="asap" name="deliveryTime" value="Snarast" ngModel={{localFormData.deliveryTime}}>
         <label for="asap">Snarast</label><br>
         
         <input type="radio" id="other" name="deliveryTime" value="Annat datum/tid" ngModel={{localFormData.deliveryTime}}>
         <label for="other">Annat datum/tid</label><br>    
+    
     </div>
    
     <h5>Välj leveransdag</h5>
