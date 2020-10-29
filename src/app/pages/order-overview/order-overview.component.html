@@ -97,8 +97,8 @@
       </tr>
       <tr>  
         <td>Datum:</td> 
-        <td id="date" *ngIf="localData.deliveryTime === 'Snarast'">{{today}}</td>
-        <td id="date" *ngIf="localData.deliveryTime === 'Annat datum/tid'">{{localData.date}}</td>
+        <td *ngIf="localData.deliveryTime === 'Snarast'">{{today}}</td>
+        <td *ngIf="localData.deliveryTime === 'Annat datum/tid'">{{localData.date}}</td>
       </tr>
       <ng-container *ngIf="localData.select === 'Snarast'">
       <tr>
