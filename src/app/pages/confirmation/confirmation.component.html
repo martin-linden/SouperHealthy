@@ -25,7 +25,7 @@
       </tr> -->
       <tr>
         <td>Leveransval:</td> 
-        <td>{{infoData.deliveryOption}}</td>
+        <td>{{infoData.deliveryOption}}<br>{{infoData.deliveryTime}}</td>
       </tr>
       <ng-container *ngIf="infoData.deliveryOption === 'Hämtar i restaurang'">
         <tr>
@@ -34,13 +34,19 @@
         </tr>
       </ng-container>
       <tr>
-        <td>Leveransval (tid):</td> 
-        <td>{{infoData.deliveryTime}}</td>
+        <td>Datum</td> 
+        <td *ngIf="infoData.deliveryTime !== 'Snarast'">{{infoData.date}}</td>
+        <td *ngIf="infoData.deliveryTime === 'Snarast'">{{data.dateToday}}</td>
+      </tr>
+      <tr>
+        <td>Vald tid:</td> 
+        <td *ngIf="infoData.deliveryTime === 'Snarast'" id="deliveryOption">Snarast (ca 30 minuter från order)</td>
+        <td *ngIf="infoData.deliveryTime !== 'Snarast'" id="deliveryOption">{{infoData.time}}</td>
       </tr>
       <ng-container *ngIf="infoData.deliveryOption === 'Leverans till adress'">
       <tr>
         <td>Leveransadress:</td> 
-        <td>{{infoData.address}}</td>
+        <td>{{infoData.address}} <br>{{infoData.ort}}</td>
       </tr>
     </ng-container>
    
@@ -66,7 +72,7 @@
   </table>
     <hr>
     <h5>Order id: #00217 </h5>
-  <h4>Total summa: {{totalSum.totalSum}} kr</h4> 
+  <h4>Total summa: {{data.totalSum}} kr</h4> 
 </div>
 <app-timer></app-timer>
 <hr width="80%">

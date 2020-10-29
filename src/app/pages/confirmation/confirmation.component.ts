@@ -11,16 +11,16 @@ import SoupJson from '../../../assets/soups.json';
 export class ConfirmationComponent implements OnInit {
   
   store: any
-  cartData: any;
-  infoData: any;
-  totalSum: any;
+  cartData: any
+  infoData: any
+  data: any
 
 
   constructor(public router: Router, public soupsStore: SoupsStoreService) {
     
     this.store = soupsStore.soups
     
-    this.totalSum = JSON.parse(sessionStorage.getItem('receipt'))
+    this.data = JSON.parse(sessionStorage.getItem('receipt'))
     this.cartData = JSON.parse(sessionStorage.getItem('receipt')).cart
     this.infoData = JSON.parse(sessionStorage.getItem('receipt')).info
 

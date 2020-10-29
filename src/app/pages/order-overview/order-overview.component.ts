@@ -44,7 +44,7 @@ export class OrderOverviewComponent implements OnInit {
       return acc
     }, {});
  */
-    sessionStorage.setItem('receipt',JSON.stringify({ cart: this.store, info: this.localData, totalSum: this.calcTotalSum()}));
+    sessionStorage.setItem('receipt',JSON.stringify({ cart: this.store, info: this.localData, totalSum: this.calcTotalSum(), dateToday: this.today}));
   }
 
 

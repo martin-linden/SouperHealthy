@@ -64,11 +64,10 @@
         <td>Postnummer:</td> 
         <td>{{localData.postnumber}}</td>
       </tr>
-    
-      <!-- <tr>
+      <tr>
         <td>Ort:</td> 
-        <td>Stockholm</td>
-      </tr> -->
+        <td>{{localData.ort}}</td>
+      </tr> 
    
     <h5>Meddelande till bud:</h5> 
     <p id="message">{{localData.textarea}}</p>
@@ -89,17 +88,19 @@
       </tr>
       <tr>
         <td>Leveransval:</td> 
-        <td id="option">{{localData.deliveryOption}}</td>
-      </tr>
-      <tr>
-        <td>Leveransval (tid):</td> 
-        <td id="deliveryOption">{{localData.deliveryTime}}</td>
+        <td id="option">{{localData.deliveryOption}}<br>{{localData.deliveryTime}}</td>
       </tr>
       <tr>  
-        <td>Datum:</td> 
+        <td>Valt datum:</td> 
         <td *ngIf="localData.deliveryTime === 'Snarast'">{{today}}</td>
         <td *ngIf="localData.deliveryTime === 'Annat datum/tid'">{{localData.date}}</td>
       </tr>
+      <tr>
+        <td>Vald tid:</td> 
+        <td *ngIf="localData.deliveryTime === 'Snarast'" id="deliveryOption">Snarast (ca 30 minuter från order)</td>
+        <td *ngIf="localData.deliveryTime === 'Annat datum/tid'" id="deliveryOption">{{localData.time}}</td>
+      </tr>
+      
       <ng-container *ngIf="localData.select === 'Snarast'">
       <tr>
         <td>Beräknad tid efter order:</td> 
@@ -112,10 +113,10 @@
         <td>16.30</td> 
       </tr>
     </ng-container>
- <!--    <tr *ngIf="localData.pickup">
+ <tr *ngIf="localData.deliveryOption === 'Hämtar i restaurang'">
       <td>Restaurangadress:</td> 
       <td>Odengatan 5</td> 
-    </tr> -->
+    </tr> 
     </tbody>
     </table>
     </div>
