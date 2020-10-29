@@ -21,6 +21,8 @@ import { SoupMenuBannerComponent } from './components/soup-menu-banner/soup-menu
 import { TimerComponent } from './components/timer/timer.component';
 import { FeedbackComponent } from './components/feedback/feedback.component';
 import { MenuComponent } from './pages/menu/menu.component';
+import { AddressComponent } from './pages/address/address.component';
+import { ConfirmAddressComponent } from './pages/confirm-address/confirm-address.component';
 
 
 @NgModule({
@@ -43,6 +45,8 @@ import { MenuComponent } from './pages/menu/menu.component';
     TimerComponent,
     FeedbackComponent,
     MenuComponent,
+    AddressComponent,
+    ConfirmAddressComponent,
 
   ],
   imports: [

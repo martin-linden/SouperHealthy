@@ -1,5 +1,5 @@
 <app-wizard></app-wizard>
-<form #f="ngForm" [ngFormOptions]="{updateOn: 'blur'}" validate >
+<form #f="ngForm" [ngFormOptions]="{updateOn: 'blur'}">
     <h2>Leveransinformation</h2>
     <div class="delivery-info-container">
          <div class="input-container">
@@ -25,31 +25,8 @@
             </div>
             <input type="phone" name="phone" placeholder="Telefon" ngModel={{localFormData.phone}}>
         </div>
-<!--  <ng-container *ngIf="localFormData.selectOne === 'Leverans till adress'">   -->
-        <div class="input-container">
-            <div class="input-content-container">
-                <img src="../../../assets/images/svg/adress.svg">
-                <p>Adress</p>
-            </div>
-            <input type="text"  name="address" placeholder="Adress" ngModel={{localFormData.address}}>
         </div>
-
-        <div class="input-container">
-            <div class="input-content-container">
-                <img src="../../../assets/images/svg/post-number.svg">
-                <p>Postnummer</p>
-            </div>
-            <input type="text"  name="postnumber" placeholder="Postnummer" ngModel={{localFormData.postnumber}}>
-        </div>
-        <div class="input-container">
-            <div class="input-content-container">
-                <img src="../../../assets/images/svg/post-number.svg">
-                <p>Ort</p>
-            </div>
-            <input type="text"  name="ort" placeholder="Postnummer" ngModel={{localFormData.ort}}>
-        </div>
-<!--  </ng-container>   -->
-        </div> 
+       
   
     <div class="textarea-main">
         <div class="textarea-container">

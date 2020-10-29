@@ -8,6 +8,8 @@ import { SoupComponent } from './pages/soup/soup.component';
 import { DeliveryInfoComponent } from './pages/delivery-info/delivery-info.component';
 import { OrderOverviewComponent } from './pages/order-overview/order-overview.component';
 import { ConfirmationComponent } from './pages/confirmation/confirmation.component';
+import {AddressComponent} from './pages/address/address.component'
+import {ConfirmAddressComponent} from './pages/confirm-address/confirm-address.component'
 
 const routes: Routes = [
   { path: '', component: HomeComponent},
@@ -18,6 +20,8 @@ const routes: Routes = [
   { path: 'delivery-info', component: DeliveryInfoComponent },
   { path: 'order-overview', component: OrderOverviewComponent },
   { path: 'confirmation', component: ConfirmationComponent },
+  { path: 'address', component: AddressComponent },
+  { path: 'confirm-address', component: ConfirmAddressComponent },
   // { path: '**', component: PageNotFoundComponent },  // 
 ];
 

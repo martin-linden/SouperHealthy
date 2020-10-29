@@ -1,0 +1,30 @@
+<form #f="ngForm" [ngFormOptions]="{updateOn: 'blur'}">
+    <img src="../../../assets/images/svg/map.svg" id="map-icon" alt="map icon"/>
+    <h4>Börja med att fylla i din adress</h4>
+<div class="input-container">
+    <div class="input-content-container">
+        <img src="../../../assets/images/svg/adress.svg">
+        <p>Adress</p>
+    </div>
+    <input type="text"  name="address" placeholder="Adress" ngModel="Upplandsgatan 12">
+</div>
+
+<div class="input-container">
+    <div class="input-content-container">
+        <img src="../../../assets/images/svg/post-number.svg">
+        <p>Postnummer</p>
+    </div>
+    <input type="text"  name="postnumber" placeholder="Postnummer" ngModel="11544">
+</div>
+<div class="input-container">
+    <div class="input-content-container">
+        <img src="../../../assets/images/svg/post-number.svg">
+        <p>Ort</p>
+    </div>
+    <input type="text"  name="ort" placeholder="ort" ngModel="Stockholm">
+</div>
+<button (click)="this.router.navigate(['/confirm-address'])" type=submit>Fortsätt</button>
+</form>
+
+
+<!-- (click)="submit(f.value) -->
