@@ -49,7 +49,7 @@ export class OrderOverviewComponent implements OnInit {
 
 
   removeLocal(){
-    sessionStorage.removeItem('data')
+    localStorage.removeItem('data')
   }
 
   removeAllSoups(){

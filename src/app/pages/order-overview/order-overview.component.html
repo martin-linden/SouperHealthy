@@ -14,11 +14,13 @@
         <th align="left">Antal</th>
         <th align="left">Ändra</th>
       </tr>
+      <ng-container>
       <tr *ngFor="let soup of store">
-        <td id="soupTitle" *ngIf="soup.title">{{soup.title}}</td> 
+        <td id="soupTitle" *ngIf="soup.amount">{{soup.title}}</td> 
         <td *ngIf="soup.amount">{{soup.amount}} st</td>
-        <td *ngIf="soup.title"><img (click)="this.router.navigate(['/soup', soup.title])" src="../../../assets/images/svg/edit.svg"></td>
+        <td *ngIf="soup.amount"><img (click)="this.router.navigate(['/soup', soup.title])" src="../../../assets/images/svg/edit.svg"></td>
       </tr>
+    </ng-container>
     <h5 id="totalSum">Total summa: {{calcTotalSum()}} kr </h5>
     </tbody>
     </table>
