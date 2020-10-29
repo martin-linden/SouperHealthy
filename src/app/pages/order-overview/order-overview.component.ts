@@ -3,6 +3,7 @@ import SoupJson from '../../../assets/soups.json';
 import { Router } from '@angular/router';
 import { SoupsStoreService } from '../../soups-store.service';
 import { element } from 'protractor';
+import Cookies from 'js-cookie';
 
 @Component({
   selector: 'app-order-overview',
@@ -20,7 +21,8 @@ export class OrderOverviewComponent implements OnInit {
   constructor(private router: Router, public soupsStore: SoupsStoreService) { 
     this.soups = SoupJson;
     this.store = soupsStore.soups
-    this.localData = JSON.parse(sessionStorage.getItem('data'))
+   /*  this.localData = JSON.parse(sessionStorage.getItem('data')) */
+   this.localData = JSON.parse(Cookies.get('data'));
     console.log(this.localData)
     let today = new Date()
 
