@@ -62,6 +62,7 @@ changeSelect(value) {
 
   ngOnInit() {
     window.scrollTo(0 , 0)
+    this.submit(this.value)
   }
 
 }
