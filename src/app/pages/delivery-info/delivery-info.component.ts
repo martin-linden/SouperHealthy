@@ -13,6 +13,9 @@ export class DeliveryInfoComponent implements OnInit {
   localData: any
   localFormData: any
   testValue: boolean;
+  hidden: string;
+  message: string;
+ 
 
   /* CheckedValue: boolean */
 
@@ -24,12 +27,22 @@ export class DeliveryInfoComponent implements OnInit {
     localStorage.setItem('data',JSON.stringify(value));
   }
 
+  showMessage(){
+    localStorage.setItem('message', 'message')
+    this.message = localStorage.getItem('message')
+  }
+
+  show(){
+    localStorage.setItem('hidden', 'hidden')
+    this.hidden = localStorage.getItem('hidden')
+
+  }
+
  
 
-changeSelect(value) {
-  console.log(value);
-}
 
+ 
+ 
 
   constructor(public router: Router,) {
   

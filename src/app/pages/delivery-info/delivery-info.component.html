@@ -1,6 +1,15 @@
 <app-wizard></app-wizard>
 <form #f="ngForm" [ngFormOptions]="{updateOn: 'blur'}">
     <h2>Leveransinformation</h2>
+    <h5>Välj leverans till adress eller att hämta upp på vår restaurang på Odengatan 15</h5>
+    <div class="delivery-option">
+      
+        <input type="radio" id="adress" name="deliveryOption" value="Leverans till adress" ngModel>
+        <label (click)="showMessage()" for="adress">Leverans till adress</label><br>
+       
+       <input  type="radio" id="get" name="deliveryOption" value="Hämtar i restaurang" ngModel>
+        <label for="get">Hämtar i restaurang</label><br>
+    </div>
     <div class="delivery-info-container">
          <div class="input-container">
             <div class="input-content-container">
@@ -27,7 +36,7 @@
         </div>
         </div>
        
-  
+  <ng-container *ngIf="message">
     <div class="textarea-main">
         <div class="textarea-container">
             <div class="textarea-content-container">
@@ -37,26 +46,20 @@
             <textarea class="text"  name="textarea" placeholder="Extra information till bud (portkod, våning, mm)" ngModel="Lämna utanför dörren, tack"></textarea>
         </div>
     </div>
-    <h5>Välj leverans till adress eller att hämta upp på vår restaurang på Odengatan 15</h5>
-    <div class="delivery-option">
-      
-        <input type="radio" id="adress" name="deliveryOption" value="Leverans till adress" ngModel>
-        <label for="adress">Leverans till adress</label><br>
-       
-       <input  type="radio" id="get" name="deliveryOption" value="Hämtar i restaurang" ngModel>
-        <label for="get">Hämtar i restaurang</label><br>
-    </div>
+</ng-container>
     
+
     <div class="delivery-option">
  
         <input type="radio" id="asap" name="deliveryTime" value="Snarast" ngModel>
         <label for="asap">Snarast</label><br>
         
         <input type="radio" id="other" name="deliveryTime" value="Annat datum/tid" ngModel>
-        <label for="other">Annat datum/tid</label><br>    
+        <label (click)="show()" for="other">Annat datum/tid</label><br>    
     
     </div>
    
+<ng-container *ngIf="hidden">
     <h5>Välj leveransdag</h5>
     <input type="date" id="birthday" name="date" ngModel>
     
@@ -88,6 +91,7 @@
             </div>
             </div>
         </div>
+    </ng-container>
         <a routerLink="/order-overview">
     <button type=submit (click)="submit(f.value)">Nästa</button>
         </a>
