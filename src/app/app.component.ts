@@ -11,14 +11,15 @@ export class AppComponent {
   pathname: string;
 
 
+
   constructor(public router: Router,) {
     
    
 
   }
 
-/*   ngOnInit() {
+   ngOnInit() {
     this.pathname = window.location.pathname; 
-  } */
+  } 
  
 }
