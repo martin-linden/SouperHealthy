@@ -5,7 +5,7 @@
 
     <div class="card-overview">
       <div class="icon-wrapper">
-        <img src="../../../assets/images/svg/list.svg" id="icon">
+        <img src="../../../assets/images/svg/list.svg" id="icon" alt="icon of list">
         <h4>Orderinfo</h4>
       </div>
         <table>
@@ -19,7 +19,7 @@
       <tr *ngFor="let soup of store">
         <td id="soupTitle" *ngIf="soup.amount">{{soup.title}}</td> 
         <td *ngIf="soup.amount">{{soup.amount}} st</td>
-        <td *ngIf="soup.amount"><img (click)="this.router.navigate(['/soup', soup.title]); updateSoup()" src="../../../assets/images/svg/edit.svg"></td>
+        <td *ngIf="soup.amount"><img (click)="this.router.navigate(['/soup', soup.title]); updateSoup()" src="../../../assets/images/svg/edit.svg" alt="icon of pen on a block"></td>
       </tr>
     </ng-container>
     <h5 id="totalSum">Total summa: {{calcTotalSum()}} kr </h5>
@@ -29,11 +29,11 @@
    
 <div class="card-overview">
       <div class="icon-wrapper">
-        <img src="../../../assets/images/svg/bike.svg" id="icon">
+        <img src="../../../assets/images/svg/bike.svg" id="icon" alt="bike icon">
         <h4>Leveransinfo</h4>
         <h6 *ngIf="localData.selectOne === 'Hämta'">Kunden hämtar i restaurang</h6>
         <div class="icon-edit-wrapper" (click)="this.router.navigate(['/delivery-info'])">
-          <img src="../../../assets/images/svg/edit.svg" id="edit-icon">
+          <img src="../../../assets/images/svg/edit.svg" id="edit-icon" alt="icon of pen on a block">
           <h5>Ändra</h5>
         </div>
         
@@ -78,7 +78,7 @@
     <hr>
     <div class="time-container">
       <div class="img-title">
-        <img src="../../../assets/images/svg/time.svg" id="edit-icon">
+        <img src="../../../assets/images/svg/time.svg" id="edit-icon" alt="icon of clock">
         <h4>Tid & leveransval</h4>
       </div>  
       <table>
@@ -132,13 +132,13 @@
       <div class="button-wrapper">
         <button (click)="this.router.navigate(['/confirmation']); submitReceipt(); removeAllSoups()">
           <div class="button-content">
-            <img src="../../../assets/images/svg/mastercard.svg" >
+            <img src="../../../assets/images/svg/mastercard.svg" alt="mastercard icon">
             <p>Betalkort</p>
           </div>
         </button>
         <button (click)="this.router.navigate(['/confirmation']); submitReceipt()">
           <div class="button-content">
-            <img src="../../../assets/images/svg/swish.svg" id="swish" >
+            <img src="../../../assets/images/svg/swish.svg" id="swish" alt="swish icon" >
           </div>
         </button>
       </div> 

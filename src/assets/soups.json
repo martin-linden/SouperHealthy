@@ -2,6 +2,7 @@
     {
         "slug": "tomatsoppa",
         "img": "../../../assets/images/soups/tomato-soup.jpg",
+        "alt": "image of soup",
         "name": "Tomatsoppa",
         "text": "Ät dig i form med våran supertomatsoppa! 100% god!",
         "minutes": 20,
@@ -17,6 +18,7 @@
     {
         "slug": "skärgårdssoppa",
         "img": "../../../assets/images/soups/soup2.jpg",
+        "alt": "image of soup",
         "name": "Skärgårdssoppa",
         "text": "Krämig, smakrik soppa med smak av havet.",
         "minutes": 30,
@@ -32,6 +34,7 @@
     {
         "slug": "linssoppa",
         "img": "../../../assets/images/soups/linssoppa.jpg",
+        "alt": "image of soup",
         "name": "Linsssoppa",
         "text": "För den som tar soppa på allvar. Surpla på!",
         "minutes": 20,
@@ -47,6 +50,7 @@
     {
         "slug": "potatis-och-purjolökssoppa",
         "img": "../../../assets/images/soups/potatis.jpg",
+        "alt": "image of soup",
         "name": "Potatis & purjolökssoppa",
         "text": "För den jordnära. Mmmm potatis.",
         "minutes": 30,
@@ -62,6 +66,7 @@
     {
         "slug": "morotssoppa",
         "img": "../../../assets/images/soups/morotssoppa.jpg",
+        "alt": "image of soup",
         "name": "Morotssoppa",
         "text": "En riktigt god klassiker.",
         "minutes": 30,
@@ -77,6 +82,7 @@
     {
         "slug": "broccolisoppa",
         "img": "../../../assets/images/soups/brockoli.jpeg",
+        "alt": "image of soup",
         "name": "Broccolisoppa",
         "text": "Testa denna fantastiska nyhet.",
         "minutes": 30,
@@ -92,6 +98,7 @@
     {
         "slug": "sötpotatissoppa",
         "img": "../../../assets/images/soups/sötpotatissoppa.png",
+        "alt": "image of soup",
         "name": "Sötpotatissoppa",
         "text": "Goda, söta potatisar.",
         "minutes": 30,
@@ -107,6 +114,7 @@
     {
         "slug": "gulaschsoppa",
         "img": "../../../assets/images/soups/gulaschsoppa.jpg",
+        "alt": "image of soup",
         "name": "Gulaschsoppa",
         "text": "Fantisera dig iväg till Ungern med denna goda klassiker.",
         "minutes": 25,
@@ -122,6 +130,7 @@
     {
         "slug": "svampsoppa",
         "img": "../../../assets/images/soups/svamp.jpg",
+        "alt": "image of soup",
         "name": "Svampsoppa",
         "text": "Skogens guld, svamp",
         "minutes": 25,
