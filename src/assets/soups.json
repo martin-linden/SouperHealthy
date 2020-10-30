@@ -98,10 +98,10 @@
         "price": 65,
         "ingredients": {"ing": "Sötpotatis, Vitlök, Vispgrädde, Paremssan, Gul lök, Salt & peppar"},
         "nutritional": {
-            "calories": "14,2 kcal",
+            "calories": "12,1 kcal",
             "protein": "7 g",
             "sugar": "3 g",
-            "fat": "31 g"
+            "fat": "21 g"
         }
     },
     {
@@ -113,10 +113,10 @@
         "price": 89,
         "ingredients": {"ing": "Biff, Vitlök, Vispgrädde, Gul lök, Salt & peppar"},
         "nutritional": {
-            "calories": "30,2 kcal",
-            "protein": "10 g",
+            "calories": "30,9 kcal",
+            "protein": "6 g",
             "sugar": "6 g",
-            "fat": "42 g"
+            "fat": "23 g"
         }
     },
     {
@@ -128,10 +128,10 @@
         "price": 85,
         "ingredients": {"ing": "Kantareller, Champinjon, Vispgrädde, Gul lök, Salt & peppar"},
         "nutritional": {
-            "calories": "30,2 kcal",
+            "calories": "23,1 kcal",
             "protein": "10 g",
-            "sugar": "6 g",
-            "fat": "42 g"
+            "sugar": "4 g",
+            "fat": "38 g"
         }
     }
 ]

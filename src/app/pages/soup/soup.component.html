@@ -45,6 +45,9 @@
                             'pointer-events': amount > 0 ? '' : 'none'}" class="remove-btn" (click)="removeSoups()">Ta bort</button> 
        <button class="add-btn" (click)="addSoups()">Lägg till</button>
     </div>
+    <div *ngIf="updated" class="updated">
+        <button (click)="removeValue(); this.router.navigate(['/order-overview'])">Tillbaka till orderöversikt</button>
+    </div>
 </div>
 
 <!-- *ngIf="amount > 0" -->

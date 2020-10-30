@@ -18,7 +18,7 @@
       <tr *ngFor="let soup of store">
         <td id="soupTitle" *ngIf="soup.amount">{{soup.title}}</td> 
         <td *ngIf="soup.amount">{{soup.amount}} st</td>
-        <td *ngIf="soup.amount"><img (click)="this.router.navigate(['/soup', soup.title])" src="../../../assets/images/svg/edit.svg"></td>
+        <td *ngIf="soup.amount"><img (click)="this.router.navigate(['/soup', soup.title]); updateSoup()" src="../../../assets/images/svg/edit.svg"></td>
       </tr>
     </ng-container>
     <h5 id="totalSum">Total summa: {{calcTotalSum()}} kr </h5>
@@ -129,13 +129,13 @@
         <h4>Välj betalningsmetod</h4>
       </div>
       <div class="button-wrapper">
-        <button (click)="this.router.navigate(['/confirmation']); submitReceipt(); removeLocal(); removeAllSoups()">
+        <button (click)="this.router.navigate(['/confirmation']); submitReceipt(); removeAllSoups()">
           <div class="button-content">
             <img src="../../../assets/images/svg/mastercard.svg" >
             <p>Betalkort</p>
           </div>
         </button>
-        <button (click)="this.router.navigate(['/confirmation']); submitReceipt(); removeLocal()">
+        <button (click)="this.router.navigate(['/confirmation']); submitReceipt()">
           <div class="button-content">
             <img src="../../../assets/images/svg/swish.svg" id="swish" >
           </div>
@@ -144,3 +144,4 @@
 </div>
 </div>
 
+<!-- ; removeLocal() -->

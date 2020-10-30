@@ -1,5 +1,6 @@
 import { Component, OnInit, OnDestroy, Input } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Router } from '@angular/router';
 import SoupJson from '../../../assets/soups.json';
 import { SoupsStoreService } from '../../soups-store.service';
 
@@ -19,6 +20,7 @@ export class SoupComponent implements OnInit, OnDestroy {
   soups: any;
   amount: number;
   cartSoup: any; 
+  updated: string;
 
   addSoups() {
     /* alert('+1 was clicked') */
@@ -35,10 +37,19 @@ export class SoupComponent implements OnInit, OnDestroy {
     console.log(this.soupsStore.soups)
   }
 
+  getValue(){
+  let updated = localStorage.getItem('update')
+  console.log(updated)
+}
 
-  constructor(public route: ActivatedRoute, public soupsStore: SoupsStoreService) {
+removeValue(){
+  localStorage.removeItem('update')
+}
+ 
+
+  constructor(public route: ActivatedRoute, public soupsStore: SoupsStoreService, public router: Router) {
     this.soups = SoupJson;
-
+    this.updated = localStorage.getItem('update')
   }
 /* 
   getMessage(){

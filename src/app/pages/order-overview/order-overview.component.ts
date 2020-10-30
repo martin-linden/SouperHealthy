@@ -61,6 +61,10 @@ export class OrderOverviewComponent implements OnInit {
     totalAmount.forEach(element => element.amount = 0)
     console.log(this.store) 
 }
+
+updateSoup(){
+  localStorage.setItem('update', 'updated')
+}
   
   
 

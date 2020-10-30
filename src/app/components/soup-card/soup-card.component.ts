@@ -33,12 +33,13 @@ export class SoupCardComponent implements OnInit {
     
   }
 
-
+ 
   constructor(public router: Router, public soupsStore: SoupsStoreService) {
+   
 
   }
   ngOnInit() {
-    //console.log(this.soupsStore.soups)
+
   }
 
 }
