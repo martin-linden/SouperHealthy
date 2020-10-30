@@ -2,7 +2,11 @@ form {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   padding: 20px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  height: 100vh;
 }
 
 .delivery-info-container {
