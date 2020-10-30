@@ -32,30 +32,12 @@ changeSelect(value) {
 
 
   constructor(public router: Router,) {
-  let localFormData = JSON.parse(localStorage.getItem('data'))
-    console.log(this.localData) 
-    
-    if(!localFormData){
-      this.localFormData = ''
-    }else{
-      this.localFormData = localFormData
-      console.log(this.localFormData)
-    }  
-
-
-    
+  
   }
 
 
 
-  /*   if(!localFormData){
-      this.localFormData = false
-      console.log(this.localFormData)
-    }
-  
-    
-   }
- */
+
   
 
 

@@ -7,7 +7,7 @@
                 <img src="../../../assets/images/svg/guest.svg">
                 <p>Namn</p>
             </div>
-            <input type="text" name="name" placeholder="Mottagarens namn"  ngModel={{localFormData.name}}>
+            <input type="text" name="name" placeholder="Mottagarens namn"  ngModel="Jane Doe">
         </div>
 
         <div class="input-container">
@@ -15,7 +15,7 @@
                 <img src="../../../assets/images/svg/mail.svg">
                 <p>Email</p>
             </div>
-            <input type="email" name="email" placeholder="Email" ngModel={{localFormData.email}}>
+            <input type="email" name="email" placeholder="Email" ngModel="example@gmail.com">
         </div>
 
         <div class="input-container">
@@ -23,7 +23,7 @@
                 <img src="../../../assets/images/svg/telephone.svg">
                 <p>Telefon</p>
             </div>
-            <input type="phone" name="phone" placeholder="Telefon" ngModel={{localFormData.phone}}>
+            <input type="phone" name="phone" placeholder="Telefon" ngModel="070 123 45 67">
         </div>
         </div>
        
@@ -34,56 +34,56 @@
                 <p>Meddelande till bud</p>
                 <img src="../../../assets/images/svg/alert.svg">
             </div>
-            <textarea class="text"  name="textarea" placeholder="Extra information till bud (portkod, våning, mm)" ngModel={{localFormData.textarea}}></textarea>
+            <textarea class="text"  name="textarea" placeholder="Extra information till bud (portkod, våning, mm)" ngModel="Lämna utanför dörren, tack"></textarea>
         </div>
     </div>
     <h5>Välj leverans till adress eller att hämta upp på vår restaurang på Odengatan 15</h5>
     <div class="delivery-option">
       
-        <input type="radio" id="adress" name="deliveryOption" value="Leverans till adress" ngModel={{localFormData.deliveryOption}}>
+        <input type="radio" id="adress" name="deliveryOption" value="Leverans till adress" ngModel>
         <label for="adress">Leverans till adress</label><br>
        
-       <input  type="radio" id="get" name="deliveryOption" value="Hämtar i restaurang" ngModel={{localFormData.deliveryOption}}>
+       <input  type="radio" id="get" name="deliveryOption" value="Hämtar i restaurang" ngModel>
         <label for="get">Hämtar i restaurang</label><br>
     </div>
     
     <div class="delivery-option">
  
-        <input type="radio" id="asap" name="deliveryTime" value="Snarast" ngModel={{localFormData.deliveryTime}}>
+        <input type="radio" id="asap" name="deliveryTime" value="Snarast" ngModel>
         <label for="asap">Snarast</label><br>
         
-        <input type="radio" id="other" name="deliveryTime" value="Annat datum/tid" ngModel={{localFormData.deliveryTime}}>
+        <input type="radio" id="other" name="deliveryTime" value="Annat datum/tid" ngModel>
         <label for="other">Annat datum/tid</label><br>    
     
     </div>
    
     <h5>Välj leveransdag</h5>
-    <input type="date" id="birthday" name="date" ngModel={{localFormData.date}}>
+    <input type="date" id="birthday" name="date" ngModel>
     
     <h5>Välj någon av våra öppna tider</h5>
     <div class="time-container">
         <div class="column">
             <div class="delivery-times">
-                <input type="radio" id="15:00 - 16:00" name="time" value="15:00 - 16:00" ngModel={{localFormData.time}}>
+                <input type="radio" id="15:00 - 16:00" name="time" value="15:00 - 16:00" ngModel>
                 <label for="15:00 - 16:00">15:00 - 16:00</label><br>
                 
-                <input type="radio" id="17:00 - 18:00" name="time" value="17:00 - 18:00" ngModel={{localFormData.time}}>
+                <input type="radio" id="17:00 - 18:00" name="time" value="17:00 - 18:00" ngModel>
                 <label for="17:00 - 18:00">17:00 - 18:00</label><br>    
                
-                <input type="radio" id="19:00 - 20:00" name="time" value="19:00 - 20:00" ngModel={{localFormData.time}}>
+                <input type="radio" id="19:00 - 20:00" name="time" value="19:00 - 20:00" ngModel>
                 <label for="19:00 - 20:00">19:00 - 20:00</label><br>    
             </div>
             </div>
            
             <div class="column">
               <div class="delivery-times">
-                <input type="radio" id="16:00 - 17:00" name="time" value="16:00 - 17:00" ngModel={{localFormData.time}}>
+                <input type="radio" id="16:00 - 17:00" name="time" value="16:00 - 17:00" ngModel>
                 <label for="16:00 - 17:00">16:00 - 17:00</label><br>
                 
-                <input type="radio" id="18:00 - 19:00" name="time" value="18:00 - 19:00" ngModel={{localFormData.time}}>
+                <input type="radio" id="18:00 - 19:00" name="time" value="18:00 - 19:00" ngModel>
                 <label for="18:00 - 19:00">18:00 - 19:00</label><br>    
                
-                <input type="radio" id="20:00 - 21:00" name="time" value="20:00 - 21:00" ngModel={{localFormData.time}}>
+                <input type="radio" id="20:00 - 21:00" name="time" value="20:00 - 21:00" ngModel>
                 <label for="20:00 - 21:00">20:00 - 21:00</label><br>    
             </div>
             </div>
