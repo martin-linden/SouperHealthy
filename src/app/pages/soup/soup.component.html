@@ -6,7 +6,7 @@
     <app-soup-banner [amount]="amount" [soup]="soup" ></app-soup-banner>
     <img src="{{soup.img}}" class="soup-img">
     <div class="intro-wrapper">
-        <h2>{{soup.name}}</h2>
+        <h3>{{soup.name}}</h3>
         <hr>
         <h4>Pris: {{soup.price}} Kr</h4>
     </div>
@@ -26,6 +26,8 @@
         <div class="nutritional-text">
             <p>Kalorier: {{soup.nutritional.calories}}</p>
             <p>Protein: {{soup.nutritional.protein}}</p>
+            <p>Socker: {{soup.nutritional.sugar}}</p>
+            <p>Fett: {{soup.nutritional.fat}}</p>
         </div>
 
         </div>
@@ -35,7 +37,7 @@
             <p>Meddela köket</p>
             <img src="../../../assets/images/svg/chef.svg">
         </div>
-        <textarea class="text" placeholder="ex allergisk mot nötter"></textarea>
+        <textarea id="kitchen-message" class="text" placeholder="ex allergisk mot nötter"></textarea>
 
     </div>
     <div class="buttons">

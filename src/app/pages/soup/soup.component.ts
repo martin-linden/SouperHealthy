@@ -40,6 +40,12 @@ export class SoupComponent implements OnInit, OnDestroy {
     this.soups = SoupJson;
 
   }
+/* 
+  getMessage(){
+    let message = document.getElementById('kitchen-message').innerText
+    console.log(message)
+    localStorage.setItem('kitchen', message)
+  } */
 
 
 

@@ -5,11 +5,13 @@
         "name": "Tomatsoppa",
         "text": "Ät dig i form med våran supertomatsoppa! 100% god!",
         "minutes": 20,
-        "price": 89,
-        "ingredients": {"ing": "Tomater, Koriander, Linser, Salladslök"},
+        "price": 79,
+        "ingredients": {"ing": "Färska tomater, Salladslök, Gul lök, Buljong, Salt & peppar"},
         "nutritional": {
-            "calories": "49 g/100g",
-            "protein": "37 g/100g"
+            "calories": "29,6 kcal",
+            "protein": "4 g",
+            "sugar": "3 g",
+            "fat": "35 g"
         }
     },
     {
@@ -17,25 +19,119 @@
         "img": "../../../assets/images/soups/soup2.jpg",
         "name": "Skärgårdssoppa",
         "text": "Krämig, smakrik soppa med smak av havet.",
-        "minutes": 20,
-        "price": 90,
-        "ingredients": {"ing": "Tomater, Koriander, Linser, Salladslök"},
+        "minutes": 30,
+        "price": 89,
+        "ingredients": {"ing": "Räkor, Gräslök, crème fraiche, purjolök, Gul lök, Salt & peppar"},
         "nutritional": {
-            "calories": "49 g/100g",
-            "protein": "37 g/100g"
+            "calories": "32,4 kcal",
+            "protein": "7 g",
+            "sugar": "4 g",
+            "fat": "40 g"
         }
     },
     {
         "slug": "linssoppa",
         "img": "../../../assets/images/soups/linssoppa.jpg",
         "name": "Linsssoppa",
+        "text": "För den som tar soppa på allvar. Surpla på!",
+        "minutes": 20,
+        "price": 75,
+        "ingredients": {"ing": "Linser, Koriander, Vitlök, Salladslök, Lagerblad, Timjan, Salt & peppar"},
+        "nutritional": {
+            "calories": "29,6 kcal",
+            "protein": "4 g",
+            "sugar": "3 g",
+            "fat": "35 g"
+        }
+    },
+    {
+        "slug": "potatis-och-purjolökssoppa",
+        "img": "../../../assets/images/soups/potatis.jpg",
+        "name": "Potatis & purjolökssoppa",
         "text": "För den jordnära. Mmmm potatis.",
         "minutes": 30,
-        "price": 80,
-        "ingredients": {"ing": "Tomater, Koriander, Linser, Salladslök"},
+        "price": 65,
+        "ingredients": {"ing": "potatis, Purjolök, koriander, Salladslök, Salt & peppar"},
         "nutritional": {
-            "calories": "49 g/100g",
-            "protein": "37 g/100g"
+            "calories": "20,6 kcal",
+            "protein": "2 g",
+            "sugar": "2 g",
+            "fat": "37 g"
+        }
+    },
+    {
+        "slug": "morotssoppa",
+        "img": "../../../assets/images/soups/morotssoppa.jpg",
+        "name": "Morotssoppa",
+        "text": "En riktigt god klassiker.",
+        "minutes": 30,
+        "price": 59,
+        "ingredients": {"ing": "Moröter, Vitlök, Ingefära, Chilli, Buljong, Salt & peppar"},
+        "nutritional": {
+            "calories": "19,1 kcal",
+            "protein": "3 g",
+            "sugar": "2 g",
+            "fat": "34 g"
+        }
+    },
+    {
+        "slug": "broccolisoppa",
+        "img": "../../../assets/images/soups/brockoli.jpeg",
+        "name": "Broccolisoppa",
+        "text": "Testa denna fantastiska nyhet.",
+        "minutes": 30,
+        "price": 65,
+        "ingredients": {"ing": "Broccoli, Vitlök, Vispgrädde, Paremssan, Gul lök, Salt & peppar"},
+        "nutritional": {
+            "calories": "14,2 kcal",
+            "protein": "7 g",
+            "sugar": "3 g",
+            "fat": "31 g"
+        }
+    },
+    {
+        "slug": "sötpotatissoppa",
+        "img": "../../../assets/images/soups/sötpotatissoppa.png",
+        "name": "Sötpotatissoppa",
+        "text": "Goda, söta potatisar.",
+        "minutes": 30,
+        "price": 65,
+        "ingredients": {"ing": "Sötpotatis, Vitlök, Vispgrädde, Paremssan, Gul lök, Salt & peppar"},
+        "nutritional": {
+            "calories": "14,2 kcal",
+            "protein": "7 g",
+            "sugar": "3 g",
+            "fat": "31 g"
+        }
+    },
+    {
+        "slug": "gulaschsoppa",
+        "img": "../../../assets/images/soups/gulaschsoppa.jpg",
+        "name": "Gulaschsoppa",
+        "text": "Fantisera dig iväg till Ungern med denna goda klassiker.",
+        "minutes": 25,
+        "price": 89,
+        "ingredients": {"ing": "Biff, Vitlök, Vispgrädde, Gul lök, Salt & peppar"},
+        "nutritional": {
+            "calories": "30,2 kcal",
+            "protein": "10 g",
+            "sugar": "6 g",
+            "fat": "42 g"
+        }
+    },
+    {
+        "slug": "svampsoppa",
+        "img": "../../../assets/images/soups/svamp.jpg",
+        "name": "Svampsoppa",
+        "text": "Skogens guld, svamp",
+        "minutes": 25,
+        "price": 85,
+        "ingredients": {"ing": "Kantareller, Champinjon, Vispgrädde, Gul lök, Salt & peppar"},
+        "nutritional": {
+            "calories": "30,2 kcal",
+            "protein": "10 g",
+            "sugar": "6 g",
+            "fat": "42 g"
         }
     }
 ]
