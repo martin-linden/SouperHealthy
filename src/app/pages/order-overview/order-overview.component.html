@@ -22,9 +22,9 @@
         <td *ngIf="soup.amount"><img (click)="this.router.navigate(['/soup', soup.title]); updateSoup()" src="../../../assets/images/svg/edit.svg" alt="icon of pen on a block"></td>
       </tr>
     </ng-container>
-    <h5 id="totalSum">Total summa: {{calcTotalSum()}} kr </h5>
     </tbody>
     </table>
+    <h5 id="totalSum">Total summa att betala: {{calcTotalSum()}} kr </h5>
 </div>
    
 <div class="card-overview">
