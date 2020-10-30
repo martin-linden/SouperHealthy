@@ -6,12 +6,7 @@
         "text": "Ät dig i form med våran supertomatsoppa! 100% god!",
         "minutes": 20,
         "price": 89,
-        "ingredients": [
-            "Tomater",
-            "Koriander",
-            "Linser",
-            "kryddor"
-        ],
+        "ingredients": {"ing": "Tomater, Koriander, Linser, Salladslök"},
         "nutritional": {
             "calories": "49 g/100g",
             "protein": "37 g/100g"
@@ -24,12 +19,7 @@
         "text": "Krämig, smakrik soppa med smak av havet.",
         "minutes": 20,
         "price": 90,
-        "ingredients": [
-            "Tomater",
-            "Koriander",
-            "Linser",
-            "kryddor"
-        ],
+        "ingredients": {"ing": "Tomater, Koriander, Linser, Salladslök"},
         "nutritional": {
             "calories": "49 g/100g",
             "protein": "37 g/100g"
@@ -42,12 +32,7 @@
         "text": "För den jordnära. Mmmm potatis.",
         "minutes": 30,
         "price": 80,
-        "ingredients": [
-            "Tomater",
-            "Koriander",
-            "Linser",
-            "kryddor"
-        ],
+        "ingredients": {"ing": "Tomater, Koriander, Linser, Salladslök"},
         "nutritional": {
             "calories": "49 g/100g",
             "protein": "37 g/100g"

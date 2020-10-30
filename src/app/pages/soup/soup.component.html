@@ -14,15 +14,19 @@
         <div class="ingredients">
             <img src="../../../assets/images/svg/ingredients.svg">
             <h6>ingredienser</h6>
-
-            <p>{{soup.ingredients}}</p>
+    <div class="ingredients-text">
+    <p>{{soup.ingredients.ing}}</p>
+    </div>
+        
 
         </div>
         <div class="nutritional">
             <img src="../../../assets/images/svg/nutritional.svg">
             <h6>Näringsinnehåll</h6>
-            <p>{{soup.nutritional.calories}}</p>
-            <p>{{soup.nutritional.protein}}</p>
+        <div class="nutritional-text">
+            <p>Kalorier: {{soup.nutritional.calories}}</p>
+            <p>Protein: {{soup.nutritional.protein}}</p>
+        </div>
 
         </div>
     </div>
