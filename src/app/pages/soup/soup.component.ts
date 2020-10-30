@@ -69,6 +69,8 @@ removeValue(){
       this.cartSoup = this.soupsStore.soups.find(soup => soup.title == this.slug)
       this.amount = this.cartSoup ? this.cartSoup.amount : 0;
     });
+
+    window.scrollTo(0 , 0)
   }
 
   ngOnDestroy() {

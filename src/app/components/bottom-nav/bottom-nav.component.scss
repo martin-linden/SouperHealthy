@@ -50,8 +50,9 @@ $primary: #32936f;
 
   .circle {
     /* border:1px solid #fff;    */
-    background: rgb(255 255 255 / 91%);
+    background: #ff0000;
     border-radius: 50%;
+    border: none;
     width: 17px;
     height: 17px;
     display: flex;
@@ -63,9 +64,10 @@ $primary: #32936f;
     margin-bottom: 17px;
 
     p {
-      color: black;
+      color: white;
       margin: 0px;
       font-size: 70%;
+      font-weight: 600;
     }
   }
 }
