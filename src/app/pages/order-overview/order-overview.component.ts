@@ -18,6 +18,7 @@ export class OrderOverviewComponent implements OnInit {
   time: any
   today: string
   addressData: any;
+  kitchenNotified: any;
 
   constructor(public router: Router, public soupsStore: SoupsStoreService) { 
     this.soups = SoupJson;
@@ -25,7 +26,8 @@ export class OrderOverviewComponent implements OnInit {
    /*  this.localData = JSON.parse(sessionStorage.getItem('data')) */
    this.localData = JSON.parse(localStorage.getItem('data'));
    this.addressData = JSON.parse(localStorage.getItem('address'));
-    
+
+
    console.log(this.localData)
     let today = new Date()
 
