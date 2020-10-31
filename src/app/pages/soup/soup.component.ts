@@ -21,6 +21,7 @@ export class SoupComponent implements OnInit, OnDestroy {
   amount: number;
   cartSoup: any; 
   updated: string;
+  kitchenNotified: any;
 
   addSoups() {
     /* alert('+1 was clicked') */
@@ -51,13 +52,14 @@ removeValue(){
     this.soups = SoupJson;
     this.updated = localStorage.getItem('update')
   }
-/* 
-  getMessage(){
-    let message = document.getElementById('kitchen-message').innerText
-    console.log(message)
-    localStorage.setItem('kitchen', message)
-  } */
 
+    
+  submit(value){
+    // om hämtas i butiken är vald
+    localStorage.setItem('kitchen',JSON.stringify(value));
+    this.kitchenNotified = JSON.parse(localStorage.getItem('kitchen')).kitchen;
+    console.log(this.kitchenNotified)
+  }
 
 
 

@@ -37,13 +37,18 @@
             <p>Meddela köket</p>
             <img src="../../../assets/images/svg/chef.svg" alt="icon of chefs hat">
         </div>
-        <textarea id="kitchen-message" class="text" placeholder="ex allergisk mot nötter"></textarea>
-
+        <form #kitchen="ngForm" [ngFormOptions]="{updateOn: 'blur'}">
+        <textarea id="kitchen-form"class="text" name="kitchen" placeholder="ex allergisk mot nötter" ngModel></textarea>
+        <div class="kitchen-message" *ngIf="kitchenNotified && kitchenNotified !== ''">
+        <p>Ditt meddelande till köket har sparats</p>
+        <img src="../../../assets/images/svg/checkmark.svg" alt="icon of checkmark">
+        </div>  
+        </form>
     </div>
     <div class="buttons">
        <button [ngStyle]="{ 'opacity': amount > 0 ? '100%' : '40%',
                             'pointer-events': amount > 0 ? '' : 'none'}" class="remove-btn" (click)="removeSoups()">Ta bort</button> 
-       <button class="add-btn" (click)="addSoups()">Lägg till</button>
+       <button class="add-btn" (click)="addSoups(); submit(kitchen.value)">Lägg till</button>
     </div>
     <div *ngIf="updated" class="updated">
         <button (click)="removeValue(); this.router.navigate(['/order-overview'])">Tillbaka till orderöversikt</button>

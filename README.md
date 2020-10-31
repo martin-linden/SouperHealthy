@@ -14,6 +14,10 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 
 You will find the project prototype [here](https://www.figma.com/file/fnJMttumMt8u1YKbhGxVOD/Souper-Healthy?node-id=0%3A1)
 
+## UX Designers
+
+Josefine Brorson | Gustaf Ekelund | Danilo Buttafoco | Tim Silén | Martin Lindén
+
 ## Live app
 
 You can see the published live app [here](https://inspiring-fermi-4ceef3.netlify.app/)
