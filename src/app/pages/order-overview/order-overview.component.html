@@ -75,10 +75,13 @@
       </tr> 
     </tbody>
     </table>
-    <div class="message">
-      <h5>Meddelande till bud:</h5> 
-      <p id="message">{{localData.textarea}}</p>
-    </div>
+    <ng-container *ngIf="localData.deliveryOption === 'Leverans till adress'">
+      <div class="message">
+        <h5>Meddelande till bud:</h5> 
+        <p id="message">{{localData.textarea}}</p>
+      </div>
+    </ng-container>
+    
     <hr>
     <div class="time-container">
       <div class="img-title">

@@ -2,7 +2,7 @@
 <app-wizard></app-wizard>
 <form #f="ngForm" [ngFormOptions]="{updateOn: 'blur'}">
     <h2>Leveransinformation</h2>
-    <h5>Välj leverans till adress eller att hämta upp på vår restaurang på Odengatan 15</h5>
+    <h5 id="choose">Välj leverans till adress eller att hämta upp på vår restaurang på Odengatan 15.</h5>
     <div class="delivery-option">
       
         <input type="radio" id="adress" name="deliveryOption" value="Leverans till adress" ngModel>
