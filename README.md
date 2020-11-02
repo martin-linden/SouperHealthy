@@ -25,3 +25,7 @@ You can see the published live app [here](https://inspiring-fermi-4ceef3.netlify
 ## Developer
 
 [Martin Lindén](https://github.com/martin-linden)
+
+## Images
+
+![Platfrom](src/assets/images/cross-platform.png "platform")
