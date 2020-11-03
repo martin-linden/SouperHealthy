@@ -28,4 +28,5 @@ You can see the published live app [here](https://inspiring-fermi-4ceef3.netlify
 
 ## Images
 
+![Iphone11](src/assets/images/iphone11.png "iphone11")
 ![Platfrom](src/assets/images/cross-platform.png "platform")
